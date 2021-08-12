@@ -1,0 +1,147 @@
+/* CSS for div sizes etc. */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.full-container {
+    width: 100vw;
+}
+
+.main-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 88vw;
+    display: block;
+}
+
+.topbar{
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    height: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.navbar p{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+.navbar a{
+    color: #fff;
+}
+
+.navbar a:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: underline !important;
+}
+
+.navbar .navbar-colum{
+    height: 4vh;
+}
+
+.sidebar img{
+    height: 5rem;
+}
+
+.sidebar .logo-text a{
+    font-weight: 400;
+    color: #222;
+}
+
+.sidebar .logo-text a:hover{
+    text-decoration: none;
+}
+
+.sidebar .section-title{
+    padding-top: 1.5rem;
+}
+
+.sidebar ul{
+    font-size: 0.9rem;
+    list-style-type: none;
+}
+
+.sidebar ul a:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.profile{
+    height: 1.75rem;
+    border-radius: 100%;
+}
+
+.separator {
+    height: 1vh;
+}
+
+.top-gap {
+    height: 3vh;
+}
+
+.bottombanner{
+    height: 10vh;
+}
+
+footer{
+    height: 35vh;
+}
+
+footer h2{
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-left: 10rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 4rem;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+footer hr{
+    background-color: #eee;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer a:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: underline !important;
+    color: #fff;
+}
+
+
+/*Media Queries */
+
+@media only screen and (max-width: 1000px){
+  .navbar p {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .navbar p {
+    font-size: 1rem;
+  }
+}
