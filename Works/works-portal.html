@@ -74,7 +74,18 @@
         
         ol{
             text-align: left; 
-            padding-left: 20%;
+            padding-left: 30%;
+        }
+        table .description{
+            text-align: justify !important;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        
+        table p{
+            margin-top: 0.5vh;
+            margin-bottom: 0.5vh;
         }
 
 
@@ -90,27 +101,21 @@
     <hr>
     
     <p style="text-indent: 10%;">Key:</p>
-    
     <table>
         <tr>
-            <td style="width: 20%">
+            <td style:="width: 100%">
                 <p style="font-weight: bold; font-size: 1.25rem;">Title</p>
-            </td>
-            <td style="width: 50%">
-                
+                <p class="description">Description</p>
                 <ol style="">
-                    <p>Description</p>
                     <br>
                     <li>Chapter 1</li>
                     <li>Chapter 2</li>
                     <li>...</li>
                 </ol>
-            </td>
-            <td style="width: 10%">File type, size, etc.</td>
-            <td style="width: 10%">
-                <p>Author, first version published, latest version published.</p>
-            </td>
-            <td style="width: 10%">
+                <p><b>File information:</b></p>
+                <p><b>Author:</b></p>
+                <p><b>First release:</b></p>
+                <p><b>Latest update:</b></p>
                 <a href=""><button type="button" class="btn btn-warning">Get simply on website</button></a>
                 <a href=""><button type="button" class="btn btn-danger">Get by requesting</button></a>
             </td>
@@ -118,6 +123,8 @@
     </table>
     
     <br>
+    
+    <p style="padding-left: 10%;">All published works are located and accessible here.</p>
     
     <hr>
     
