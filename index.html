@@ -19,6 +19,11 @@
     
     <title>Welcome</title>
     
+    <!--Favicons-->
+    <link rel="icon" type="image/png" href="Images/Favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="Images/Favicons/favicon-16x16.png" sizes="16x16" />
+
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         /*-----Essentials and stuff*/
@@ -71,7 +76,7 @@
         
         .header-separator{
             margin-top: 0.25vh;
-            height: 3.5vh;
+            height: 4.5vh;
             background-color: #212F3D;
             /*background-color: #073268;*/
             color: #fff;
@@ -79,7 +84,9 @@
             text-align: center;
             padding-top: 8px;
         }
-
+        .header-separator p{
+            padding-bottom: 2rem;
+        }
         .separator{
             height: 1vh;
             background-color: #F0F3F4;
@@ -131,6 +138,15 @@
         .version{
             padding-top: 2vh;
             padding-left: 2vw;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /*
+        @media only screen and (max-width: 1600px){
+            .map-container {
+                width: 75%;
+            }
         }
     </style>
 </head>
@@ -203,19 +219,16 @@
                     </div>
                 </div> -->
                 
-                <!--
                 <div class="col-lg-4 col-md-6 content-colum">
                     <i class="fas fa-university column-icon"></i>
                     <hr class="items-hr">
                     <h6 class="text-center">Pantheons</h6>
                     <p class="text-center">Several pantheons of the greats - the Gigachads, and others. Suggestions for the pantheons are more than welcome.</p>
                     <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="Other-Projects/gigachad-pantheon.html" target="_blank" class="text-light">Access!</a></button>
+                    <button class="btn btn-dark btn-center text-center"><a href="Other-Projects/pantheons.html" target="_blank" class="text-light">Access!</a></button>
                     </div>
                 </div>
-                -->
-                
-                <!--
+
                 <div class="col-lg-4 col-md-6 content-colum">
                     <i class="fas fa-file-archive column-icon"></i>
                     <hr class="items-hr">
@@ -225,13 +238,12 @@
                     <button class="btn btn-dark btn-center text-center"><a href="Archive/archive-portal.html" target="_blank" class="text-light">Access!</a></button>
                     </div>
                 </div>
-                -->
                 
             </div>
         </div>
     </div>
     <footer>
-        <p class="version">Version: Beta 0.2 (last update: September 10th 2021)</p>
+        <p class="version">Version: Alpha 1 (last update: April 11th 2022)</p>
     </footer>
 </div>
 <!-- ----------------------JAVASCRIPT IS HERE, DO NOT GO FURTHER ------------------------------------->

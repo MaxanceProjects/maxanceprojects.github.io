@@ -19,6 +19,10 @@
     
     <title>Historical</title>
     
+    <!--Favicons-->
+    <link rel="icon" type="image/png" href="../../Images/Favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../Images/Favicons/favicon-16x16.png" sizes="16x16" />
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -34,7 +38,6 @@
         }
         
         .row img{
-            width: 50%;
             margin-left: auto;
             margin-right: auto;
             display: block;
@@ -42,10 +45,23 @@
             margin-top: 2vh;
         }
         
+        .image-vertical{
+            width: 40%;
+        }
+        
+        .image-horizontal{
+            width: 60%;
+        }
+        
         .caption{
             font-size: 0.8rem;
             text-align: center;
             padding-top: 1vh;
+        }
+        
+        .col-md-8 p{
+            text-align: justify;
+            text-indent: 1vw;
         }
         
         /*table, th, td {
@@ -89,14 +105,42 @@
     <div class="row">
         <div class="col-md-8">
             <h3>Prehistoric Times</h3>
-            <p>Many prehistoric remains can be found in the area. The first big example is monoliths. These are big standing stones which were raised with a set of logs and ropes into a hole. [link to be provided]</p>
-            <p style="color: red;">DISCLAIMER: No this isn't the final entry, it's just that I'm under time pressure and I'd rather check that everything works. Most of this section should be done by September.</p>
+            <p>Many prehistoric remains can be found in the area. The first big example is monoliths. Monoliths are singular large stones that stand (or used to stand) vertically. Not too much is known about them, for the most esoteric of us, these rocks served as "resourceful" or "healing" points as they capture the energy and vibrations of the Earth. For others, these were just used for celebrations or even for tracking the solstices. Archeologists are not sure how these massive objects got there, although the consensus seems to be that the rock was sliding on a set of rails and logs (the wheel had not been invented yet). It would then be raised vertically into a hole. The depth of this hole depends on the height of the monolith, but in the case of the monolith pictured here it must've been quite deep, for the monolith in Givrins, meanwhile, because it is much smaller the hole was less deep. Links: <a href="https://youtu.be/p1UKVXA25EM?t=936" target="_blank">[Video on the raising of monoliths (FR)]</a> <a href="https://pluneret.pagesperso-orange.fr/images4/kervingu1.jpg" target="_blank">[Diagram on how to transport and raise a monolith]</a></p>
         </div>
         <div class="col-md-3">
-            <img class="" src="image-bank/monolith-example.JPEG">
+            <img class="image-vertical" src="image-bank/ecogia-menhir.JPEG">
             <p class="caption">Example of a monolith (source: Max)</p>
         </div>
         <div class="col-md-1"></div>
+        
+        <div class="col-md-3">
+            <img class="image-horizontal" src="image-bank/assens-tumulus.JPEG">
+            <p class="caption">The Assens Tumulus (source: Max)</p>
+        </div>
+        <div class="col-md-8">
+            <p>Another prehistoric type of moment you might see in the area is a tumulus. A tumulus is essentially a hill of dirt (rock located on the inside). It’s basically a burial ground for important people. However archeologists usually don’t find much as the acidity of the soil and rain over thousands of years makes it disappear. Dolmens are another type of tomb you may see in the area, it looks like a table made of rocks. Tumuli are more common in the region than dolmens, probably because it’s easier for circumstance to destroy a construction rather than a simple hill.</p>
+            <p>The people in prehistoric times often took advantage of their surroundings, be it for protection or places of worship. Prehistoric fortresses can be found in the area, notably the one right by the Mont Tendre due to its very strategic location, onlooking the plateau. Unfortunately not much is left out of these structures that were made of products derived from dirt or clay, wood, and rock. Only a couple mounds of dirt that aren’t very visible subsist. </p>
+        </div>
+        <div class="col-md-1"></div>
+        
+        <div class="col-md-8">
+            <p>Another example of prehistoric people taking advantage of the nature around them was with glacial erratics. By far the most common type of site in the area, these are very large rocks with a different geological composition than the other rocks in the area. Why is that? It goes back to tens of thousands years ago when glaciers ripped out large chunks from the mountains and valleys they were eroding, transporting them down to the plateau for centuries. When the ice age was over, the rocks trapped in the ice were freed at last and let to rest where we can find them today. You can often see some holes made in these rocks, we aren’t absolutely sure of why these were made, but the leading hypothesis is that these holes were used as repositories for offerings. These écueilles in French or schalen in German are visible in the very large Pierre à Pény, and pushed to the extreme with the Pierre à Mille Trous. Going back to the Pierre à Pény, you might see a group of “pagans” pulling up to the monument and doing rituals there around New Year’s. This is because it’s historical consensus that these glacial erratics have been used as worshipping sites, think of them as monoliths but already moved and much more impressive. Esoterics nowadays believe that their location was no coincidence, as the glacier deposited them on “energy points”, which like the monoliths, harness the vibrational energy and can therefore be used for healing or other spiritual purposes. Knowledge of these places would be kept for centuries to come, with the Celts for example often taking the monuments for themselves, with the glacial erratic in Saubraz near the Aubonne River being a perfect example.</p>
+        </div>
+        <div class="col-md-3">
+            <img class="image-horizontal" src="image-bank/pierre-a-mille-trous.jpg">
+            <p class="caption">The Pierre à Mille Trous (source: Max)</p>
+        </div>
+        <div class="col-md-1"></div>
+        
+        <div class="col-md-8">
+            <p>This last one is very rare, I think there is only one instance of it in fact, and that is the cromlech. The cromlech is basically a circle of large rocks. Yeah that’s all. Once again used for faith-related purposes, it can be quite impressive to look at. The only example that I know of is the one located in La Praz. Even then it has a shady past as a small minority think the place is fake, and reports of vandalism having taken place.</p>
+        </div>
+        <div class="col-md-3">
+            <img class="" src="">
+            <p class="caption"></p>
+        </div>
+        <div class="col-md-1"></div>
+        
     </div>
     
     
@@ -113,23 +157,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-<!--Put some additionnal stuff here if need be-->
+<!--Put some additionnal stuff here if need be-
+
+<div class="col-md-8">
+            <h3></h3>
+            <p></p>
+        </div>
+        <div class="col-md-3">
+            <img class="" src="">
+            <p class="caption"></p>
+        </div>
+        <div class="col-md-1"></div>
+
+<div class="col-md-3">
+            <img class="" src="">
+            <p class="caption"></p>
+        </div>
+        <div class="col-md-8">
+            <p></p>
+        </div>
+        <div class="col-md-1"></div>
+
 
 <!--
-<div class="col-lg-3 col-sm-6 section-column">
-            <table>
-            <tr>
-                <th><a href=""><img class="box-image" src="../Images/Covers/" alt=""></a></th>
-            </tr>
-            <tr>
-                <td><p class="section-title" style=""><span style="color:;"></span></p></td>
-            </tr>
-            <tr>
-                <td><p class="section-text">To access, click on the image, or <a href="">here</a>.</p></td>
-            </tr>
-            </table>
-            
-            
-        </div>
-
-<!-- https://s.geo.admin.ch/8f7fd10eda -->
