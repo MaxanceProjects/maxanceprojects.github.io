@@ -14,10 +14,16 @@
     
     <style type="text/css">
         
-        table{
+        .main-container{
             margin-left: auto;
             margin-right: auto;
             width: 90%;
+        }
+        
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
         
         table, th, td {
@@ -49,13 +55,31 @@
 <body>
 <div class="main-container">
     
-    <h3 style="text-align: center;">Change log</h3>
+    <h3 style="text-align: center;">Change Log/Website History</h3>
+    
+    <p>Keep in mind that with each update, the change log is also updated, this obviously does not need be stated unless anything other than the update that is being added is changed.</p>
+    <p>Note that any changes made on external documents, e.g the Maxance's Laws page on Google Docs will not be featured within this log, dates of modification may or may not be written down on such documents. This only contains changes to the website's code and/or files/file structure.</p>
     
     <table>
         <tr>
             <th class="center one">Update name</th>
             <th class="center two">Release date</th>
             <th class="center three">Changes</th>
+        </tr>
+        
+        <tr>
+        <td class="center one" id="">Alpha 2.0.1</td>
+            <td class="center two">September 4th 2022</td>
+            <td class="bullet three">
+                <p class="summary"></p>
+                <ul>
+                    <li>(+) Added a file called favicon.ico just in case there is the need to change code.</li>
+                    <li>(+) Added some text above the change log about the logging of updates not being added in the change log. Main container of change log has features in CSS, its width is now 90% while the table has changed from a width of 90% to 100%. This change has been made to better accomodate the text above the table.</li>
+                    <li>(~) Changed the name from "Change log" to "Change Log/Website History".</li>
+                    <li>(~) Verified/replaced the old favicons with the new extracted folder.</li>
+                    <p>Image bug fix coming in the next update, I have figured out it happened because GitHub has not registered the change of case of letters which occurred back in Alpha 2 as part of restructuring (folders renamed from "Images" to "images" for example will still appear within GitHub as "Images" and because it is case sensitive, the image does not display). Website may be down at some point. Backup will be made.</p>
+                </ul>
+            </td>
         </tr>
         
         <tr>
