@@ -1,253 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>      
+<head>
     <!-- Meta stuff that's needed -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
-    <meta name="description" content="Welcome to Maxance's Website (MaxanceProjects).">
+    <meta name="description" content="Welcome to Maxance's Website (MaxanceProjects). Links to all projects and other info available.">
     <meta name="keywords" content="maxanceprojects maxance projects github io landing page index main page">
-    
-    
-    <!--CSS STYLESHEET LINK-->
-    <link rel="stylesheet" type="text/css" href="">      
-      
+    <!--CSS Link-->
+    <link rel="stylesheet" href="styles/navbar.css"> <!--Universal Navbar Link-->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script>
-    
     <title>Welcome</title>
-    
     <!--Favicons-->
     <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
-
-    
     <!--Local Internal CSS-->
     <style type="text/css">
-        /*-----Essentials and stuff*/
-        body {
-            background-color: #F0F3F4 !important;
-        }
+        body{}
         .main-container{
-            width: 97.5%;
             margin-left: auto;
             margin-right: auto;
-            background-color: #ECF0F1;
+            width: 90%;
         }
-
-        .header-area{
+        .separator-white{
+            height: 1vh;
+            background-color: #F0F3F4;
+        }
+        .cover{
             background-image:url(images/covers/general-cover.jpg);
             position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 94vh;
+            height: 65vh;
             color: #fff;
             text-align: center;
         }
-
-        .header-area:before{
+        .cover:before{
             content: "";
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
-            background-color: rgba(0,0,0,0.03);
+            background-color: rgba(0,0,0,0.05);
         }
-
-        .header-text{
-            padding-top: 69vh;
+        .cover-text{
+            padding-top: 20vh;
             font-size: 2rem;
         }
-
-        .header-hr{
+        .cover-hr{
             background-color: #fff;
             margin-left: auto;
             margin-right: auto;
             width: 30%;
         }
-
-        .header-lower{
+        .cover-lower{
             font-size: 1rem;
         }
-        
-        .header-separator{
-            margin-top: 0.25vh;
-            height: 4.5vh;
-            background-color: #212F3D;
-            /*background-color: #073268;*/
-            color: #fff;
-            font-size: 0.75rem;
-            text-align: center;
-            padding-top: 8px;
+        .title-box{
+            margin-top: 2rem;
         }
-        .header-separator p{
-            padding-bottom: 2rem;
-        }
-        .separator{
-            height: 1vh;
-            background-color: #F0F3F4;
-        }
-        .separator-dark{
-            background-color: #212F3D;
-            color: #fff;
-            height: 1vh;
-        }
-
-        .button{
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
+        .title-box h1{
+            font-size: 2rem;
             text-align: center;
         }
-        
-        .content-colum{
-            margin-top: 4rem;
-            margin-bottom: 4rem;
+        .content-column{
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: justify;
         }
-        
-        .column-icon{
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            font-size: 4rem;
+        h6{
+            font-size: 1.5rem;
+            padding-bottom: 0.5rem;
         }
-        
-        .column-icon:hover{
-            color: #00DDB7;
-            cursor: cell !important;
-            transition: 0.3s;
-        }
-
         .items-hr{
             width: 75%;
             margin-left: auto;
             margin-right: auto;
         }
-
-        footer{
-            background-color: #1C2833;
-            height: 10vh;
+        .button{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center !important;
+        }
+        article{
+            text-align: justify;
+        }
+        .picture-container{
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            margin-top: 4vh;
+        }
+        .picture-horizontal{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            display: block;
+            border-radius: 5%;
+        }
+        .caption{
+            text-align: center;
+            padding-top: 1vh;
+        }
+        .more{
+            background-color: #212F3D;
             color: #fff;
         }
-        
-        .version{
-            padding-top: 2vh;
-            padding-left: 2vw;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+        .more .items-hr{
+            background-color: #fff;
         }
-        
-        /*
-        @media only screen and (max-width: 1600px){
-            .map-container {
-                width: 75%;
-            }
+        footer{
+            background-color: #212F3D;
+            height: 10vh;
+        }
+        footer p{
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: justify;
+            padding-top: 2vh;
+            color: #fff;
         }
     </style>
 </head>
-
 <body>
-<!-- BODY GOES HERE -->      
 <div class="main-container">
-    <div class="header-area">
     
-        <h1 class="header-text">Welcome to my website's landing page!</h1>
-        <hr class="header-hr">
-        <p class="header-lower">Scroll to see some useful links below:</p>
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href=""><img class="logo-img" src="images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:15mania.squarecraft@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.facebook.com/maxance.jouanneau" target="_blank"><li><i class="fa-brands fa-facebook"></i></li></a>
+                <a href="https://twitter.com/McSauce_" target="_blank"><li><i class="fa-brands fa-twitter"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
     
+    <div class="separator-white"></div>
+    
+    <div class="cover">
+        <h1 class="cover-text">Welcome to my website's landing page!</h1>
+        <hr class="cover-hr">
+        <p class="cover-lower">Scroll to see some useful links below:</p>
     </div>
     
-    <div class="header-separator">
-        <p>View from the Marchissy Municipal Pavillion. Source: myself.</p>
+    <div class="separator"></div>
+    
+    <main class="container-fluid">
+    <div class="title-box">
+        <h1>Projects</h1>
+        <hr>
     </div>
-    
-    <div class="separator"></div>
-    
-    <div class="separator"></div>
-    <div class="separator"></div>
-    
-    <div class="items" id="items">
-        <h2 class="items-h2 text-center pt-5">Here's everything on this website:</h2>
-        <hr class="items-hr">
-        <p class="text-center">This page is a "table of contents" of sorts... an index if you will. Yes, the buttons aren't perfectly aligned, hopefully I'll fix that someday.</p>
-        
-        <div class="container-fluid">
-            <div class="row">
-                
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fas fa-info-circle column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">About</h6>
-                    <p class="text-center">Find out a good bit of information about the website, those who run it, and how it all functions. Contact option available too.</p>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="about/about.html" class="text-light" target="_blank">Access!</a></button>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fas fa-map-marked-alt column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">Exploration</h6>
-                    <p class="text-center">The portal for the exploring community, as well as historical and geographical resources. Also home to the very important map.</p>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="exploring/exploring.html" class="text-light" target="_blank">Access!</a></button>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fas fa-book column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">Works & Wiki</h6>
-                    <p class="text-center">All written works, any misc. content, and other stuff including a wiki are available by clicking the button below.</p>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="works/works.html" target="_blank" class="text-light">Access!</a></button>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fa-solid fa-ghost column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">Games</h6>
-                    <p class="text-center">Any kind of game-related content or information can be found here.<p/>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="games/ogvr.html" target="_blank" class="text-light">Access!</a></button>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fas fa-university column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">Pantheons</h6>
-                    <p class="text-center">Several pantheons of the greats - the Gigachads, and others. Suggestions for the pantheons are more than welcome.</p>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="other/pantheons.html" target="_blank" class="text-light">Access!</a></button>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 content-colum">
-                    <i class="fas fa-file-archive column-icon"></i>
-                    <hr class="items-hr">
-                    <h6 class="text-center">Archive</h6>
-                    <p class="text-center">Available below is the link to the MFAS archive portal. It contains the spreadsheet/catalogue of all archived items, a submission form, and an explanation to how it works.</p>
-                    <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="archive/archive.html" target="_blank" class="text-light">Access!</a></button>
-                    </div>
-                </div>
-                
+    <div class="row">
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Works & Wiki</h6>
+            <p class="box-text">All written works, any misc. content, and other stuff including a wiki are available by clicking the button below.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="works/works.html" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Exploration</h6>
+            <p class="box-text">The portal for the exploring community, as well as historical and geographical resources. Also home to the very important map.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="exploring/exploring.html" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Pantheons</h6>
+            <p class="box-text">Several pantheons of the greats - the Gigachads, and others. Suggestions for the pantheons are more than welcome.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="other/pantheons.html" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Archive</h6>
+            <p class="box-text">Available below is the link to the MFAS archive portal. It contains the spreadsheet/catalogue of all archived items, a submission form, and an explanation to how it works.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="archive/archive.html" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Games</h6>
+            <p class="box-text">Any kind of game-related content or information can be found here.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="games/ogvr.html" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center">Time</h6>
+            <p class="box-text">Anything "time-related" will appear through this portal. Right now though, it just leads to my schedule and public calendar.</p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="https://docs.google.com/spreadsheets/d/16JtDE6Ay7_CW1Dw0KORuB6Ph-aqWG8APTcl0gRXS-84/edit?usp=sharing" class="text-light" target="_blank">Access</a></button>
             </div>
         </div>
     </div>
+    </main>
+    
+    <article>
+    <div class="container-fluid">
+        <div class="title-box">
+            <h1>About this Website</h1>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p>Current Update: Release 3.0 - Sunday October 23rd 2022. For more information, consult the change log below:</p>
+                <div class="button py-2">
+                    <button class="btn btn-success btn-center text-center"><a href="about/change-log.html" class="text-light" target="_blank">View the Change Log</a></button>
+                </div>
+                <p style="color: #d62460; padding-top: 1rem;">You may see that there are translations available. This is currently not the case. When on a page, the translation that you're on and the ones that are available will be more visible than the others (e.g white and have a hover effect unlike the gray ones). There is currently no initative to translate the pages, but this is just setting things up for the future.</p>
+                <b>Website History</b>
+                <p>Coding began as early as September 2020, however I spent very little time on it, beginning the wiki and press sections (still a work in progress). Fast.io was considered in December where developpement gained some speed. On August 12th 2021 the website has been launched in its first version, hosting an index, the about page, an exploring portal with four sections, and a works portal which currently doesn't host anything. However, at the current moment, some unfinished components can be hidden in the website, those will be available soon.</p>
+                <b>Acknowledgements</b>
+                <p>Particular thanks to Bootstrap for providing documentation which makes this work a trillion times easier. Behind this website is what's called CSS (basically a set of rules for formatting every component of the website. Bootstrap already has provided CSS which really helps to cut any extra work. A must have for anyone coding with HTML. <a href="https://getbootstrap.com/" target="_blank">Visit Bootstrap here</a>.</p>
+                <p>Brackets is my coding software of choice after Notepad++. Very simple, it even autocompletes whenever you're starting an HTML tag. Isn't that really cool? <a href="https://brackets.io/" target="_blank">Visit Brackets here</a>.</p>
+                <p>Speaking of which, thanks to Notepad ++. It's really cool coding software everyone knows about. <a href="https://notepad-plus-plus.org/" target="_blank">Visit Notepad++ here</a>.</p>
+                <p>Thank you to Fontawesome for providing the icons used on this website, like in the navbar for example. <a href="https://fontawesome.com/" target="_blank">Visit Fontawesome here</a>.</p>
+                <p>Thank you to Favic-O-Matic for their tool which made the favicons (the icons in the tab) for this website. <a href="https://favicomatic.com/" target="_blank">Visit Favic-O-Matic here</a>.</p>
+                <p>Lastly, thank you to my ICT teacher from Year 10-11 and everyone on the internet who taught me and helped me out in HTML, CSS, Javascript, and Python.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="picture-container">
+                    <img class="picture-horizontal" src="images/profiles/profile-max.jpg">
+                    <p class="caption">I'm literally him.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    <div class="separator-white"></div>
+    
+    <div class="more">
+    <div class="container-fluid">
+        <div class="title-box" style="margin-top: 0 !important;">
+            <h1 style="padding-top: 1rem;">See work from people I know</h1>
+            <hr style="background-color: #fff;">
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 content-column">
+                <h6 class="text-center">Emma's Online Portfolio</h6>
+                <p class="box-text">Contains graphic designs and photography.</p>
+                <hr class="items-hr">
+                <div class="button py-2">
+                    <button class="btn btn-light btn-center text-center"><a href="https://emmavanaswegen.myportfolio.com/" class="text-dark" target="_blank">Access</a></button>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 content-column">
+                <h6 class="text-center">Zac's YouTube Channel</h6>
+                <p class="box-text">Fantastic projects made from LEGO.</p>
+                <hr class="items-hr">
+                <div class="button py-2">
+                    <button class="btn btn-light btn-center text-center"><a href="https://www.youtube.com/c/ZBricks" class="text-dark" target="_blank">Access</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="separator-white"></div>
+    
     <footer>
-        <p class="version">Version: Alpha 2.0.2 (last update: September 4th 2022).</p>
+        <p>Website hosted thanks to Github Pages. Please reach out with the email link in the navbar if you have any questions. Enjoy the website.</p>
     </footer>
+    
 </div>
 <!-- ----------------------JAVASCRIPT IS HERE, DO NOT GO FURTHER ------------------------------------->
 <!-- Optional JavaScript -->
@@ -257,8 +299,20 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-<!--Put some additionnal stuff here if need be-->
-
-<!--Search Engine Meta-->
-    <meta name="description" content="">
-    <meta name="keywords" content="maxanceprojects maxance projects github io">
+<!--
+<div class="col-md-3 col-sm-6 content-column">
+            <h6 class="text-center"></h6>
+            <p class="box-text"></p>
+            <hr class="items-hr">
+            <div class="button py-2">
+                <button class="btn btn-dark btn-center text-center"><a href="" class="text-light" target="_blank">Access</a></button>
+            </div>
+        </div>
+<div class="col-md-3 col-sm-6 content-column">
+                <h6 class="text-center"></h6>
+                <p class="box-text"></p>
+                <hr class="items-hr">
+                <div class="button py-2">
+                    <button class="btn btn-light btn-center text-center"><a href="" class="text-dark" target="_blank">Access</a></button>
+                </div>
+            </div>

@@ -1,0 +1,59 @@
+/*CSS for the Universal Navbar*/
+nav{
+    background-color: #212F3D;
+}
+nav a{
+    color: white;
+}
+.languages{
+    padding-top: 2vh;
+    font-weight: lighter;
+}
+.languages ul{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    list-style-type: none;
+    float: left;
+    display: inline-block;
+}
+.languages ul li {
+    float: left;
+    padding-left: 2rem;
+    font-size: 0.95rem;
+}
+.logo-img{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 2.5rem;
+}
+.social{
+    padding-top: 1.5vh;
+}
+.social ul{
+    list-style-type: none;
+    float: right;
+}
+.social ul li{      
+    float: left;
+    padding-right: 3rem;
+    font-size: 2rem;
+}
+.available a{
+    color: #fff;
+}
+.available a:hover{
+    color: #abdbff;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+.unavailable a{
+    color: #a3a2a3;
+}
+.unavailable a:hover{
+    color: #a3a2a3;
+    text-decoration: none;
+}
