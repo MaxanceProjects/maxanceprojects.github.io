@@ -18,7 +18,9 @@
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
     <!--Local Internal CSS-->
     <style type="text/css">
-        body{}
+        body{
+            font-family: "Times New Roman", serif !important;
+        }
         .main-container{
             margin-left: auto;
             margin-right: auto;
@@ -28,13 +30,17 @@
             height: 1vh;
             background-color: #F0F3F4;
         }
+        .separator-dark{
+            height: 1vh;
+            background-color: #242323;
+        }
         .cover{
-            background-image:url(images/covers/general-cover.jpg);
+            background-image:url(images/covers/general-cover.JPEG);
             position: relative;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 65vh;
+            height: 75vh;
             color: #fff;
             text-align: center;
         }
@@ -61,14 +67,14 @@
             font-size: 1rem;
         }
         .title-box{
-            margin-top: 2rem;
+            margin-top: 0.5rem;
         }
         .title-box h1{
             font-size: 2rem;
             text-align: center;
         }
         .content-column{
-            margin-top: 2rem;
+            margin-top: 1rem;
             margin-bottom: 1rem;
             text-align: justify;
         }
@@ -93,10 +99,10 @@
         .picture-container{
             margin-left: auto;
             margin-right: auto;
-            width: 60%;
+            width: 40%;
             margin-top: 4vh;
         }
-        .picture-horizontal{
+        .profile-picture{
             margin-left: auto;
             margin-right: auto;
             width: 100%;
@@ -108,14 +114,16 @@
             padding-top: 1vh;
         }
         .more{
-            background-color: #212F3D;
+            /*background-color: #212F3D;*/
+            background-color: #242323;
             color: #fff;
         }
         .more .items-hr{
             background-color: #fff;
         }
         footer{
-            background-color: #212F3D;
+            /*background-color: #212F3D;*/
+            background-color: #242323;
             height: 10vh;
         }
         footer p{
@@ -158,12 +166,19 @@
     <div class="separator-white"></div>
     
     <div class="cover">
-        <h1 class="cover-text">Welcome to my website's landing page!</h1>
+        <h1 class="cover-text">Welcome to my website!</h1>
         <hr class="cover-hr">
         <p class="cover-lower">Scroll to see some useful links below:</p>
     </div>
     
-    <div class="separator"></div>
+    <div class="separator-white"></div>
+    
+    <div class="separator-dark" style="height: auto !important;">
+        <p style="text-align: center; color: #fff; font-size: 1.5vh; padding-top: 1vh; padding-bottom: 1vh !important; font-style: italic;">Pictured above are the Ruins of the Oujon Carthusian Monastery, in the Jura Mountains (specifically the Arzier commune in the Vaud Canton). It is my favorite place in the world. Picture taken on Wednesday June 1st 2022.</p>
+        <div class="separator-white" style="margin: 0; padding: 0;"></div>
+    </div>
+    
+    
     
     <main class="container-fluid">
     <div class="title-box">
@@ -195,6 +210,7 @@
                 <button class="btn btn-dark btn-center text-center"><a href="pantheons/pantheons.html" class="text-light" target="_blank">Access</a></button>
             </div>
         </div>
+        <!--
         <div class="col-md-3 col-sm-6 content-column">
             <h6 class="text-center">Games</h6>
             <p class="box-text">Any kind of game-related content or information can be found here. Still a work in progress.</p>
@@ -203,6 +219,7 @@
                 <button class="btn btn-dark btn-center text-center"><a href="games/ogvr.html" class="text-light" target="_blank">Access</a></button>
             </div>
         </div>
+        -->
         <!-- <div class="col-md-3 col-sm-6 content-column">
             <h6 class="text-center">Time</h6>
             <p class="box-text">Anything "time-related" will appear through this portal. Right now though, it just leads to my schedule and public calendar.</p>
@@ -217,29 +234,29 @@
     <article>
     <div class="container-fluid">
         <div class="title-box">
-            <h1>About this Website</h1>
+            <h1 class="pt-5">About this Website</h1>
             <hr>
         </div>
         <div class="row">
             <div class="col-md-8">
-                <p>Current Update: 4.11 - updated on January 14th 2024. For more information, consult the change log below:</p>
+                <p>Current Version: 5.0 - updated on January 16th 2024. For more information, consult the change log below:</p>
                 <div class="button py-2">
-                    <button class="btn btn-success btn-center text-center"><a href="about/change-log.html" class="text-light" target="_blank">View the Change Log</a></button>
+                    <button class="btn btn-dark btn-center text-center"><a href="about/change-log.html" class="text-light" target="_blank">View the Change Log</a></button>
                 </div>
                 <p style="color: #d62460; padding-top: 1rem;">You may see that the website may offer translations. This is currently not the case right now but it's a work in progress. When on a page, the translation that you're on and the ones that are available will be more visible than the others (e.g white and have a hover effect unlike the gray ones). There is currently no initative to translate the pages, but this is just setting things up for the future.</p>
                 <b>Website History</b>
-                <p>Coding began as early as September 2020, however I spent very little time on it, beginning the wiki and press sections (still a work in progress). Fast.io was considered in December where developpement gained some speed. On August 12th 2021 the website has been launched in its first version, hosting an index, the about page, an exploring portal with four sections, and a works portal which currently doesn't host anything. However, at the current moment, some unfinished components can be hidden in the website, those will be available soon.</p>
+                <p>Coding began as early as September 2020, however I spent very little time on it, beginning the wiki and press sections (still a work in progress). Fast.io was considered in December where developpement gained some speed but then it stopped being a thing so oopsie daisies I had to find something else, which led me to GitHub. On August 12th 2021 the website has been launched in its first version, hosting an index, the about page, an exploring portal with four sections, and a works portal which currently doesn't host anything. However, at the current moment, some unfinished components can be hidden in the website, those will be available soon. Over time redesigns have come, the website has become more pragmatic (for lack of a better word). Changes are still expected to come bit by bit, depends on my energy and time.</p>
                 <b>Acknowledgements</b>
                 <p>Particular thanks to Bootstrap for providing documentation which makes this work a trillion times easier. Behind this website is what's called CSS (basically a set of rules for formatting every component of the website. Bootstrap already has provided CSS which really helps to cut any extra work. A must have for anyone coding with HTML. <a href="https://getbootstrap.com/" target="_blank">Visit Bootstrap here</a>.</p>
                 <p>Brackets is my coding software of choice after Notepad++. Very simple, it even autocompletes whenever you're starting an HTML tag. Isn't that really cool? <a href="https://brackets.io/" target="_blank">Visit Brackets here</a>.</p>
                 <p>Speaking of which, thanks to Notepad ++. It's really cool coding software everyone knows about. <a href="https://notepad-plus-plus.org/" target="_blank">Visit Notepad++ here</a>.</p>
                 <p>Thank you to Fontawesome for providing the icons used on this website, like in the navbar for example. <a href="https://fontawesome.com/" target="_blank">Visit Fontawesome here</a>.</p>
                 <p>Thank you to Favic-O-Matic for their tool which made the favicons (the icons in the tab) for this website. <a href="https://favicomatic.com/" target="_blank">Visit Favic-O-Matic here</a>.</p>
-                <p>Lastly, thank you to my ICT teacher from Year 10-11 and everyone on the internet who taught me and helped me out in HTML, CSS, Javascript, and Python.</p>
+                <p>Lastly, thank you to my Digital Design and Development (DDD) teacher from Year 10-11, my friends in that class, and everyone on the internet who taught me and helped me out in HTML, CSS, Javascript, and Python.</p>
             </div>
             <div class="col-md-4">
                 <div class="picture-container">
-                    <img class="picture-horizontal" src="images/profiles/profile-max.jpg">
+                    <img class="profile-picture" src="images/profiles/profile-max.jpg">
                     <p class="caption">I'm literally him.</p>
                 </div>
             </div>
@@ -252,7 +269,7 @@
     <div class="more">
     <div class="container-fluid">
         <div class="title-box" style="margin-top: 0 !important;">
-            <h1 style="padding-top: 1rem;">See work from people I know and love dearly</h1>
+            <h1 style="padding-top: 1rem;">See work from people I know and love dearly:</h1>
             <hr style="background-color: #fff;">
         </div>
         <div class="row">

@@ -1,12 +1,15 @@
 /*CSS for the Universal Navbar*/
 nav{
+    background-color: #242323;
+    /*background-color: #910000;
     background-color: #212F3D;
+    background-color: #7a0101;*/
 }
 nav a{
     color: white;
 }
 .languages{
-    padding-top: 2vh;
+    padding-top: 3vh;
     font-weight: lighter;
 }
 .languages ul{
@@ -28,10 +31,10 @@ nav a{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 2.5rem;
+    width: 4.5rem;
 }
 .social{
-    padding-top: 1.5vh;
+    padding-top: 2vh;
 }
 .social ul{
     list-style-type: none;
@@ -42,11 +45,16 @@ nav a{
     padding-right: 3rem;
     font-size: 2rem;
 }
+.social ul li:hover{
+    color: #ff3b3b !important;
+    transition: 0.4s;
+}
 .available a{
     color: #fff;
 }
 .available a:hover{
-    color: #abdbff;
+    /*color: #abdbff;*/
+    color: #ff3b3b;
     font-weight: bolder;
     transition: 0.4s;
 }
