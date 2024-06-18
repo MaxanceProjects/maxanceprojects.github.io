@@ -25,6 +25,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
     
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -78,18 +80,47 @@
         .publication-col{
             margin-bottom: 4vh;
         }
+        
+        .separator{
+            height: 1vh;
+            background-color: #ccc;
+        }
 
 
     </style>
 </head>
 
 <body>
-<!-- BODY GOES HERE -->      
 <div class="main-container">
 
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href="maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+    <div class="separator"></div>
+    
     <div class="title-container">
         <h1 class="pt-4 text-center">Welcome to the exploring portal!</h1>
-        <p>As of now, the sections just contain simple explanations, although subpages are slowly added as time passes.</p>
         <hr>
     </div>
     
@@ -99,13 +130,13 @@
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
-                <th><a href="map.html" target="_blank"><img class="box-image" src="images/map-cover.jpg" alt="The view from the Crêt de la Neuve (1494m)."></a></th>
+                <th><a href="map.html" ><img class="box-image" src="images/map-cover.jpg" alt="The view from the Crêt de la Neuve (1494m)."></a></th>
             </tr>
             <tr>
                 <td><p class="section-title" style=""><span style="color:;">The World.</span></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">This page contains the map itself, as well as a guide on how to use it, plus some extra info. To access it, click on the view from the Crêt de la Neuve and its flagpole, or <a href="map.html" target="_blank">here</a>.</p></td>
+                <td><p class="section-text">This page contains the map itself, as well as a guide on how to use it, plus some extra info. To access it, click on the view from the Crêt de la Neuve and its flagpole, or <a href="map.html" >here</a>.</p></td>
             </tr>
             </table>
             
@@ -115,13 +146,13 @@
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
-                <th><a href="resources.html" target="_blank"><img class="box-image" src="images/sources-cover.jpg" alt="St. Robert's Church, Founex"></a></th>
+                <th><a href="resources.html" ><img class="box-image" src="images/sources-cover.jpg" alt="St. Robert's Church, Founex"></a></th>
             </tr>
             <tr>
                 <td><p class="section-title" style=""><span style="color:;">Resources Section</span></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">Whether it's for the map, or for other projects related to exploring, I always do research. By clicking on the resources section you can see everything I use for exploration-related buisiness. It's a goldmine of goldmines if you will. To access it, click on Saint Robert's Church, or click <a href="resources.html" target="_blank">here</a>.</p></td>
+                <td><p class="section-text">Whether it's for the map, or for other projects related to exploring, I always do research. By clicking on the resources section you can see everything I use for exploration-related buisiness. It's a goldmine of goldmines if you will. To access it, click on Saint Robert's Church, or click <a href="resources.html" >here</a>.</p></td>
             </tr>
             </table>
             
@@ -132,13 +163,13 @@
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
-                <th><a href="historical.html" target="_blank"><img class="box-image" src="images/historical-cover.jpg" alt="Ruins of Notre Dame d'Oujon in Autumn."></a></th>
+                <th><a href="historical.html" ><img class="box-image" src="images/historical-cover.jpg" alt="Ruins of Notre Dame d'Oujon in Autumn."></a></th>
             </tr>
             <tr>
-                <td><p class="section-title" style=""><span style="color:;">Historical Section</span></p></td>
+                <td><p class="section-title" style=""><span style="color:;">History of the Land</span></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">Anything related to local history. By local I mean everything in a 100-120km radius from <a href="https://s.geo.admin.ch/8f7f78ee4b" target="_blank">Point 0</a> (France isn't that well covered). To access, click on the ruins of Notre Dame d'Oujon, or click <a href="historical.html" target="_blank">here</a>.</p></td>
+                <td><p class="section-text">Anything related to local history. By local I mean everything in a 100-120km radius from <a href="https://s.geo.admin.ch/8f7f78ee4b" >Point 0</a> (France isn't that well covered). It's more of a general "overview" but specific articles below can complete the information. To access, click on the ruins of Notre Dame d'Oujon, or click <a href="historical.html" >here</a>.</p></td>
             </tr>
             </table>
             
@@ -148,11 +179,11 @@
     </div>
     <div class="row" style="margin-top: 5vh;">
         <div class="col-lg-12">
-            <h4 style="text-align: center;" id="publications">Library of Exploring-Related Publications</h4>
+            <h4 style="text-align: center;" id="publications">Exploring Library</h4>
             <hr>
         </div>
         
-        <p>There's unfortunately nothing here for now. New files here will be PDFs (if the test works out well of course).</p>
+        <p>The sections above are articles about general things. Here there are articles both in HTML and PDF form. So far there is nothing here though.</p>
         
     </div>
     </div>
@@ -173,13 +204,13 @@
 <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
-                <th><a href="LINK" target="_blank"><img class="box-image" src="images/COVER" alt="ALT"></a></th>
+                <th><a href="LINK" ><img class="box-image" src="images/COVER" alt="ALT"></a></th>
             </tr>
             <tr>
                 <td><p class="section-title" style=""><span style="color:;">SECTION TITLE</span></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">DESCRIPTION TEXT To access, click on the ruins of IMAGE, or click <a href="LINK" target="_blank">here</a>.</p></td>
+                <td><p class="section-text">DESCRIPTION TEXT To access, click on the ruins of IMAGE, or click <a href="LINK" >here</a>.</p></td>
             </tr>
             </table>
             
@@ -194,6 +225,6 @@
             <hr>
             <p style="text-align: justify;">TEXT</p>
             <div class="button pb-3 pt-1">
-                    <button class="btn btn-dark btn-center text-center"><a href="LINK" class="text-light" target="_blank">Read</a></button>
+                    <button class="btn btn-dark btn-center text-center"><a href="LINK" class="text-light" >Read</a></button>
             </div>
         </div>

@@ -24,6 +24,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
     
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -62,7 +64,9 @@
         }
         
         .separator{
-            height: 5vh;
+            height: 1vh;
+            background-color: #ddd;
+            margin-bottom: 4vh;
         }
         
         .library-cover{
@@ -117,6 +121,30 @@
 <body>
 <div class="main-container">
     
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
     <div class="separator"></div>
     
     <h1 class="text-center" style="padding-bottom: 2vh;">MaxanceProjects Library</h1>
@@ -170,23 +198,6 @@
     <table>
         <tr>
             <td style="width: 25%;">
-                <h6 class="work-title">Math Tutoring Base Document</h6>
-                <a href="" target="_blank"><img src="" class="work-image"></a>
-                <div class="button pb-3 pt-1">
-                    <button class="btn btn-danger btn-center text-center"><a href="https://docs.google.com/document/d/13yK6vkGJetVLalh1T-YQAb2yQ2mUgPUwuy0Qg1bb5Bs/edit?usp=sharing" class="text-light" target="_blank">Consult the English Version</a></button>
-                </div>
-            </td>
-            <td style="width: 75%;">
-                <p>For anyone that I tutor in math. I highly suggest you follow along with me to get some explanations before you do anything else. Feel free (and I highly recommend this) to read through this document and MAKE YOUR OWN NOTES, preferably on paper.</p>
-            </td>
-        </tr>
-    </table>
-    <br>
-    
-    <br>
-    <table>
-        <tr>
-            <td style="width: 25%;">
                 <h6 class="work-title">Maxance's Laws of Motion</h6>
                 <a href="" target="_blank"><img src="" class="work-image"></a>
                 <div class="button pb-3 pt-1">
@@ -194,8 +205,7 @@
                 </div>
             </td>
             <td style="width: 75%;">
-                <p>One day I decided to come up with four laws of motion (inspired by Newton’s of motion). It’s a bit disappointing to hear but these had nothing to do with motion at all. Given that I like to share my projects, I decided that hey, why not share this on my website. With time some stuff changed here and there. The idea is that these “laws” are sometimes useless, sometimes stupid, sometimes both, but sometimes they have a glimmer of insight. I’d like to take that further and say that perhaps all of these have some kind of insight that would be relevant someday because in every bit of knowledge there lies some kind of thing whose power has not been discovered yet but might one day… nahhh I’m kidding I have complete creative freedom with this it’s really just for fun. It makes for good reasoning exercises and it also keeps my math and logic skills sharp.</p>
-                <p style="font-weight: bold;">Classification: N/A</p>
+                <p>Inspired by Newton's Laws of Motion (yet they have nothing to do with motion at all). These are a bit stupid at times, but I fw them (they're mad chill). No, I don't consider myself their inventor. Generally most things that you come up with have already been thought before. If the existence of the law somehow infringes on your rights, don't hesitate to contact!</p>
             </td>
         </tr>
     </table>
@@ -208,8 +218,7 @@
     <hr>
     <br>
     <h3 class="heading">Restricted Works</h3>
-    <p style="width: 90%; margin-left: auto; margin-right: auto; padding-bottom: 2rem;">Please contact me if needed. Conditions may apply. Probably don't try if I didn't refer you to this section... It's just me flexing that I made these honestly. All rights reserved for these works.</p>
-    <p style="width: 90%; margin-left: auto; margin-right: auto; padding-bottom: 2rem;">Of course there are more things that I have made. This is just me flexing what I made. Again, contact me if needed.</p>
+    <p style="width: 90%; margin-left: auto; margin-right: auto; padding-bottom: 2rem;">A non-exhaustive list of different things I've made whose access is restricted on a case-by-case basis. Normally these works aren't available. Contact me if needed. This is mostly me just flexing the things I made but will not share :)</p>
     
     <br>
     <table>
@@ -226,56 +235,23 @@
             </td>
         </tr>
     </table>
-    
     <br>
+    
     <table>
         <tr>
             <td style="width: 25%;">
-                <h6 class="work-title">Obsidian Notes</h6>
-                <a href="" target="_blank"><img src="images/obsidian-network.JPG" class="work-image"></a>
-                <div class="button pb-3 pt-1">
-                    <p class="text-center">All my notes with their connections forming a network.</p>
-                </div>
-            </td>
-            <td style="width: 75%;">
-                <p>A vast network (still in progress) of markdown (.md) files but which can also be opened as text files (.txt). Currently this is on demand only as I have no idea how to make it more public nor do I really want to.</p>
-                <p style="font-weight: bold;">Classification: A or B depending on the note.</p>
-            </td>
-        </tr>
-    </table>
-    
-    <br>
-    <table>
-        <tr>
-            <td style="width: 25%;">
-                <h6 class="work-title">Feng Shui Portfolio</h6>
+                <h6 class="work-title">On demand resources I've made</h6>
                 <a href="" target="_blank"><img src="" class="work-image"></a>
                 <div class="button pb-3 pt-1">
                 </div>
             </td>
             <td style="width: 75%;">
-                <p>Basically a book filled with tips and self-designed infographics on things that might come in useful. Obviously its entirety cannot be shared but some infographics and other resources can be shared upon request.</p>
-                <p style="font-weight: bold;">Classification: A* as a whole, A and B for certain parts.</p>
+                <p>I've united a lot of works under one banner here. There's the Feng Shui Portfolio containing useful infographics I've made, BELIEFS (collection of all fundamental beliefs), my obsidian notes (a collection of .md files which contain notes from university and other things too), and the institutions. Extracts are accessible on demand.</p>
             </td>
         </tr>
     </table>
     <br>
     
-    <table>
-        <tr>
-            <td style="width: 25%;">
-                <h6 class="work-title">BELIEFS Spreadsheet</h6>
-                <a href="" target="_blank"><img src="" class="work-image"></a>
-                <div class="button pb-3 pt-1">
-                </div>
-            </td>
-            <td style="width: 75%;">
-                <p>A google sheet document that contains my most important and most defining beliefs which I should never forget. It also features other useful information, such as when I came up with it and how. It's currently only available on demand but I might make it public who knows.</p>
-                <p style="font-weight: bold;">Classification: A as a whole, B or C for certain parts.</p>
-            </td>
-        </tr>
-    </table>
-    <br>
     
     <table>
         <tr>
@@ -286,7 +262,7 @@
                 </div>
             </td>
             <td style="width: 75%;">
-                <p>Having started in January 2020, my journal recounts a lot of historical events, opinions, and all sorts of other things too. These journals are classified, but I'm very proud of them so I'm gonna share their existence here. The collection of books listed below is what is called the "general journal," meaning that it has the bulk of all information that I have ever written down. There can also be "specialized" journals, such as my dream journal or my journal of spiritual places. They don't tell the full picture, unlike the general journals listed below. The pages of this journal cannot be shared. I can, however, give out some information from a certain date if needed. This is reserved for people who are close to me. This is the current list of volumes which have been <b>completed</b>:</p>
+                <p>I began writing in a journal in January 2020. It contains historical accounts, opinions, etc. (basically the usual things to expect). Yes, I do write a lot in it and in all of its history I've only accidentally skipped two days. This is the current list of volumes which have been <b>completed</b>:</p>
                 <ul>
                     <li><i>Book I</i>: 20/01/2020-17/05/2020, pages 1-237.</li>
                     <li><i>Book II</i>: 18/05/2020-10/10/2020, pages 238-397.</li>
@@ -295,9 +271,9 @@
                     <li><i>Book V</i>: 25/09/2021-01/04/2022, pages 816-939.</li>
                     <li><i>Book VI</i>: 02/04/2022-07/04/2023, pages 940-1181.</li>
                     <li><i>Book VII</i>: 08/04/2023-04/11/2023, pages 1182-1421.</li>
-                    <li><i>Book VIII has not yet been finished.</i></li>
+                    <li><i>Book VIII</i>: 05/11/2023-20/04/2024, pages 1422-1661.</li>
+                    <li><i>Book IX has not yet been finished.</i></li>
                 </ul>
-                <p style="font-weight: bold;">Classification: A* as a whole, A for certain parts.</p>
             </td>
         </tr>
     </table>
@@ -312,14 +288,15 @@
                 </div>
             </td>
             <td style="width: 75%;">
-                <p>Sometimes dreams are a weird thing man. They sometimes have the most random things, sometimes they're insightful, sometimes they're terrifying, sometimes they're actually good, sometimes they can even predict the future. All of these things have happened to me - more than once. Just like for my journal, the entirety of the dream journal's contents cannot be revealed. Dreams can be shared on demand. This is the current list of volumes which have been <b>completed</b>:</p>
+                <p>Sometimes dreams are a weird thing man. I've heard from some wise folks that you shouldn't share the contents of your dreams with most people because it can tell a lot about who you are as a person, so it's obviously restricted. This is the current list of volumes which have been <b>completed</b>:</p>
                 <ul>
                     <li><i>Dream Journal I</i>: 18/01/2020-04/11/2020, 24 pages.</li>
                     <li><i>Dream Journal II</i>: 12/11/2020-07/02/2022, 26 pages.</li>
                     <li><i>Dream Journal III</i>: 05/03/2022 - 06/01/2024, 28 pages.</li>
                     <li><i>Dream Journal IV has not yet been finished.</i></li>
+                    <br>
+                    <li>A guide on dreams is being written. When available, it may or may not be accessible here.</li>
                 </ul>
-                <p style="font-weight: bold;">Classification: A* as a whole, A for certain parts.</p>
             </td>
         </tr>
     </table>

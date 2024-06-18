@@ -25,6 +25,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
     
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -190,6 +192,30 @@
 <!-- BODY GOES HERE -->      
 <div class="main-container">
     
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
     <div class="top-header-1"></div>
     <div class="top-header-2"></div>
     <div class="separator"></div>
@@ -199,7 +225,7 @@
     <div class="box-of-text">
         <h1>Welcome!</h1>
         <hr>
-        <p>To use the map, you can navigate through the window on this site, or even better, click on the full screen icon, or click the button below the frame. A layers and places menu should be visible on your left, check and uncheck boxes to see layers. To see an item, click on it on the map or in the menu. A place has a title, a description, and images in some cases. The title provides an ID (see below for IDs and Icons) as well as the name of the place. Places have coordinates using multiple systems (mainly decimal coordinates).</p>
+        <p>To use the map, you can navigate through the window on this site, or even better, click on the full screen icon, or click the button below the frame. A layers and places menu should be visible on your left; you can check and uncheck boxes to see layers. To see an item, click on it on the map or in the menu. A place has a title, a description, coordinates, and images in some cases. The title provides an ID (see below for IDs and Icons) as well as the name of the place. Places have coordinates using multiple systems (mainly decimal coordinates).</p>
     </div>
     
     <div class="map-container">
@@ -213,9 +239,12 @@
     <div class="box-of-text">
         <h1>Some additional information and disclaimers:</h1>
         <hr>
-        <p>This map lacks some accuracy, although I promise, the stories I've written, and the locations are as accurate as they can be. Some of these places have not been verified, only visited by other explorers and mapmakers - this is specified in the description. I apologize for any inaccuracies, I promise I'm visiting and informing myself as much as possible. By the off chance that even the slightest inaccuracy does occur, I apologize. Be sure to contact me if you have any corrections to make or any suggestions :)</p>
-        <p>This map gets updated a lot. I really mean a lot. You can see the view count right under the description. Currently it's at almost 600 views. Keep in mind that around 90% if not more of those views are from me. There are times when I check this map virtually every day. I regularly go on exploring trips and always have some kind of information to bring back. Additionally, this map was created over a year ago (was created on July 29th 2019) back when I didn't necessarily have as much places to put; because of that I added random and not necessarily "relevant" places. Some places just aren't that interesting, some completely got wiped off the map. These places and IDs get changed around because places get deleted more re-classified. If you're planning to use this on a trip, or for informing yourself if you consider this that insightful, please check the map the day you're beginning the endeavor as changes happen more often than you think.</p>
-        <p>All maps and sources I use are in the <a href="resources.html">resources section</a>.</p>
+        
+        <p>This map lacks some accuracy, although I promise, the stories I've written, and the locations are as accurate as they can be. Some of these places have not been verified, only visited by other explorers and mapmakers - this is specified in the description as "location unverified". I apologize for any inaccuracies, I promise I'm visiting and informing myself as much as possible. By the off chance that even the slightest inaccuracy does occur, I apologize. Be sure to contact me if you have any corrections to make or any suggestions :)</p>
+        
+        <p>This map gets updated a lot. I really mean a lot. You can see the view count right under the description. Currently it's at almost 2.7k views. Keep in mind that around 90% if not more of those views are from me (either from actually consulting the map or booting it up on my website). There are times when I check this map virtually every day. I regularly go on exploring trips and always have some kind of information to bring back. This map is about five years old (created on July 27th 2019) and has seen a lot of changes. It will definitely see more. IDs and categories are swapped around, irrelevant places are removed, new things are added, etc. The map does get updated, but documents and information based off the map doesn't necessarily get updated. As such, please double check everything.</p>
+        
+        <p>All maps and sources I use are in the <a href="resources.html">resources and sources section</a>.</p>
         
         <h1>Explanation of layers, icons and IDs:</h1>
         <hr>
@@ -239,7 +268,7 @@
         </div>
         
         <hr>
-        <p><b>Layer 2: Historical Sites and Monuments</b> contains anything of historical significance (although places that are very old but still used like churches will be in layer 4). Anything like a statue, a place of worship, an old construction, a castle, ruins, etc... These icons are colored according to the historical period they were either made in, or that they have most prominent features from, what they're most known for, or what just best represents them. These do have some uncertainty though.</p>
+        <p><b>Layer 2: Historical Sites and Monuments</b> contains anything of historical significance (although places that are very old but still used like churches will be in layer 4). Anything like a statue, a place of worship, an old construction, a castle, ruins, etc... These icons are colored according to the historical period they were either made in or best represented by. These do have some uncertainty though.</p>
         <div class="table-container">
             <table>
                 <tr>
@@ -343,16 +372,6 @@
                     <td class="ico"><img src="map/M-4000-4999.JPG"></td>
                     <td class="id">M</td>
                     <td class="desc">A mountain peak between 4000m - 4999m above sea level (and technically higher up).</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/W.JPG"></td>
-                    <td class="id">W</td>
-                    <td class="desc">A river, stream, etc...</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/WX.JPG"></td>
-                    <td class="id">W1, W2, W3</td>
-                    <td class="desc">Important points in a river (W1 = source of the river, W2 = confluence of two rivers, W3 = mouth of the river).</td>
                 </tr>
             </table>
         </div>

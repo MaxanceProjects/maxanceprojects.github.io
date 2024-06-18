@@ -24,6 +24,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
     
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -84,14 +86,44 @@
             padding: 0;
             margin: 0;
         }
+        
+        .separator{
+            height: 1vh;
+            background-color: #ccc;
+        }
 
 
     </style>
 </head>
 
-<body>
-<!-- BODY GOES HERE -->      
+<body>    
 <div class="main-container">
+    
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+    <div class="separator"></div>
 
     <div class="title-container">
         <h1 class="pt-5 text-center">Welcome to the resources section!</h1>
@@ -499,6 +531,20 @@
                     </tr>
                     <tr>
                         <td><p class="section-text">Published by the Speleology Commission of the Swiss Academy of Natural Sciences in 2002. The book is in French.  / Publié par la Commission de Spéléologie de l'Académie suisse des Sciences Naturelles en 2002. Le livre est en Français. </p></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="col-lg-3 col-sm-6 section-column">
+                <table>
+                    <tr>
+                        <th><a href="https://mcah.ch/publications/cahiers-darcheologie-romande/" target="_blank"><button type="button" class="btn btn-success my-3">Voir le catalogue + commander</button></a></th>
+                    </tr>
+                    <tr>
+                        <td><p class="section-title" style=""><span style="color:;">Cahiers d'archéologie romande</span></p></td>
+                    </tr>
+                    <tr>
+                        <td><p class="section-text">Contains 191 volumes so far. The works are written in French. / Contient 191 volumes jusqu'à présent. Les ouvrages sont en Français. </p></td>
                     </tr>
                 </table>
             </div>

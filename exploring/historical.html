@@ -25,6 +25,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
     
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
     <!--Local Internal CSS-->
     <style type="text/css">
         
@@ -74,6 +76,11 @@
             text-indent: 1vw;
         }
         
+        .separator{
+            height: 1vh;
+            background-color: #ccc;
+        }
+        
         /*table, th, td {
             border: 1px solid black;
             width: 100%;
@@ -105,6 +112,32 @@
 <!-- BODY GOES HERE -->
 <div class="container-fluid">
 <div class="main-container">
+    
+    <nav class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5 languages">
+            <ul>
+                <span class="available"><li><a href="">English</a></li></span>
+                <span class="unavailable"><li><a href="">Français</a></li></span>
+                <span class="unavailable"><li><a href="">Русский</a></li></span>
+                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
+            </ul>
+        </div>
+        <div class="col-sm-2 logo">
+                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+        </div>
+        <div class="col-sm-5 social">
+            <ul>
+                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+    <div class="separator"></div>
 
     <div class="title-container">
         <h1 class="pt-5 text-center">Welcome to the Historical section!</h1>
@@ -115,7 +148,7 @@
     <div class="row">
         <div class="col-md-8">
             <h3>Prehistoric Times</h3>
-            <p>Many prehistoric remains can be found in the area. The first big example is monoliths. Monoliths are singular large stones that stand (or used to stand) vertically. Not too much is known about them, for the most esoteric of us, these rocks served as "resourceful" or "healing" points as they capture the energy and vibrations of the Earth. For others, these were just used for celebrations or even for tracking the solstices. Archeologists are not sure how these massive objects got there, although the consensus seems to be that the rock was sliding on a set of rails and logs (the wheel had not been invented yet). It would then be raised vertically into a hole. The depth of this hole depends on the height of the monolith, but in the case of the monolith pictured here it must've been quite deep, for the monolith in Givrins, meanwhile, because it is much smaller the hole was less deep. Links: <a href="https://youtu.be/p1UKVXA25EM?t=936" target="_blank">[Video on the raising of monoliths (FR)]</a> <a href="https://pluneret.pagesperso-orange.fr/images4/kervingu1.jpg" target="_blank">[Diagram on how to transport and raise a monolith]</a></p>
+            <p>Many prehistoric remains can be found in the area. The first big example is monoliths. Monoliths are singular large stones that stand (or used to stand) vertically. Not too much is known about them, for the most esoteric of us, these rocks served as "resourceful" or "healing" points as they capture the energy and vibrations of the Earth. For others, these were just used for celebrations or even for tracking the solstices. Archeologists are not sure how these massive objects got there, although the consensus seems to be that the rock was sliding on a set of rails and logs (the wheel had not been invented yet). It would then be raised vertically into a hole. The depth of this hole depends on the height of the monolith, but in the case of the monolith pictured here it must've been quite deep, for the monolith in Givrins, meanwhile, because it is much smaller the hole was less deep. <a href="#FT"><sup>1, 2</sup></a></p>
         </div>
         <div class="col-md-3">
             <img class="image-vertical" src="images/ecogia-menhir.jpg">
@@ -154,7 +187,18 @@
     </div>
     
     
+    <!--FOOTNOTES SECTION-->
     
+    <br>
+    <br>
+    <br>
+    <h3 id="FT">Footnotes</h3>
+    <p>This contains some resources and sources I've used in the formulation of this. Be aware that a lot of it is personal knowledge which either comes from reading information signs on hikes, information told to me by others, my history of law class I've had in 2023-2024, and the sources available in the <a href="resources.html">resources and sources</a> page.</p>
+    <hr>
+    <ul style="list-style-type: none;">
+        <li>[1]: <a href="https://youtu.be/p1UKVXA25EM?t=936" target="_blank">[Video on the raising of monoliths (FR)]</a></li>
+        <li>[2]: <a href="https://pluneret.pagesperso-orange.fr/images4/kervingu1.jpg" target="_blank">[Diagram on how to transport and raise a monolith]</a></li>
+    </ul>
     
     
 </div>
