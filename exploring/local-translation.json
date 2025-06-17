@@ -1,0 +1,50 @@
+{
+    "en": {
+        "title": "Exploring portal",
+        "exploring-title": "Welcome to the exploring portal!",
+        "world-title": "The World.",
+        "world-text": "This page contains the map of points of interest and a guide on how to use it. To access it, click on the view from the Crêt de la Neuve and its flagpole, or <a href='map.html'>here</a>.",
+        "resources-title": "Resources and Sources",
+        "resources-text": "Whether it's for the map or for other projects related to exploring, I always do research. By clicking on the resources section, you can see everything I use for exploration-related business. It's a goldmine of goldmines if you will. To access it, click on Saint Robert's Church, or click <a href='sources.html'>here</a>.",
+        "historical-title": "History of the Land",
+        "historical-text": "An overview of local history. By local I mean everything in a 100-120km radius from Point 0 (France isn't that well covered). Specific articles available below can complete the information. To access, click on the ruins of Notre Dame d'Oujon, or click <a href='historical.html'>here</a>.",
+        "library-title": "Exploring Library",
+        "library-intro-text": "The sections above are articles about general things. Here are articles both in HTML and PDF form. So far there is nothing here though."
+    },
+    "fr": {
+        "title": "Portail de l'exploration",
+        "exploring-title": "Bienvenue dans le portail exploration !",
+        "world-title": "Le Monde.",
+        "world-text": "Cette page contient la carte des points d'intérêt et un guide pour comprendre comment l’utiliser. Pour y accéder, cliquez sur la vue depuis le Crêt de la Neuve et son mât de drapeau, ou <a href='map.html'>ici</a>.",
+        "resources-title": "Ressources et Sources",
+        "resources-text": "Que ce soit pour la carte ou d’autres projets liés à l’exploration, j’essaie toujours de m’informer un maximum. En y accédant, vous pourrez voir tout ce que j’utilise pour tout ce qui est en lien avec l’exploration. C’est une mine d’or de mines d’or. Pour y accéder, cliquez sur l’Église Saint Robert, ou <a href='sources.html'>ici</a>.",
+        "historical-title": "Histoire Locale",
+        "historical-text": "Une vue d’ensemble de l’histoire locale. Par « local » j’entends tout dans un rayon de 100-120km depuis le Point 0 (la France n’est malheureusement pas très bien couverte actuellement). Des articles disponibles ci-dessous peuvent compléter certains points. Pour y accéder, cliquez sur les ruines du Couvent d’Oujon, ou <a href='historical.html'>ici</a>.",
+        "library-title": "Bibliothèque",
+        "library-intro-text": "Ici il y a des articles qui parlent de sujets plus précis sous forme de PDF et HTML. Pour l’instant il n’y a rien qui est disponible."
+    },
+    "ru": {
+        "title": "",
+        "exploring-title": "",
+        "world-title": "",
+        "world-text": "",
+        "resources-title": "",
+        "resources-text": "",
+        "historical-title": "",
+        "historical-text": "",
+        "library-title": "",
+        "library-intro-text": ""
+    },
+    "de": {
+        "title": "",
+        "exploring-title": "",
+        "world-title": "",
+        "world-text": "",
+        "resources-title": "",
+        "resources-text": "",
+        "historical-title": "",
+        "historical-text": "",
+        "library-title": "",
+        "library-intro-text": ""
+    }
+}

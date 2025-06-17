@@ -4,37 +4,31 @@
     <!-- Meta stuff that's needed -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Welcome to Maxance's Website (MaxanceProjects). Links to all projects and other info available.">
+    <meta name="description" content="">
     <meta name="keywords" content="maxanceprojects maxance projects github io landing page index main page">
-    <!--CSS Link-->
-    <link rel="stylesheet" href="styles/navbar.css"> <!--Universal Navbar Link-->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Fontawesome-->
-    <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script>
-    <title>Welcome</title>
+    <!--Title-->
+    <title></title>
     <!--Favicons-->
     <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
+    <!--External CSS-->
+    <link rel="stylesheet" href="styles/navbar.css"> <!--Universal Navbar Link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- Bootstrap CSS -->
+    <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script> <!--Fontawesome-->
     <!--Local Internal CSS-->
     <style type="text/css">
-        body{
+        /*Containers*/
+        body{ 
             font-family: "Times New Roman", serif !important;
         }
-        .main-container{
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
+        .main-container{ 
+            margin-left: auto; 
+            margin-right: auto; 
+            width: 85%;
         }
-        .separator-white{
-            height: 1vh;
-            background-color: #F0F3F4;
-        }
-        .separator-dark{
-            height: 1vh;
-            background-color: #242323;
-        }
+        /*Cover business*/
         .cover{
+            margin-top: 0.5rem;
             background-image:url(images/covers/general-cover.JPEG);
             position: relative;
             background-size: cover;
@@ -66,6 +60,15 @@
         .cover-lower{
             font-size: 1rem;
         }
+        .cover-caption-box{
+            margin-top: 0.5rem;
+            height: auto !important;
+            background-color: #242323;
+        }
+        /*Title for the projects*/
+        main{
+            margin-top: 2rem;
+        }
         .title-box{
             margin-top: 0.5rem;
         }
@@ -73,14 +76,21 @@
             font-size: 2rem;
             text-align: center;
         }
-        .content-column{
+        /*The content boxes*/
+        .contcol{ /*The div inside which everything is*/
             margin-top: 1rem;
             margin-bottom: 1rem;
             text-align: justify;
         }
+        .contcol table{
+            width: 90% !important;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0rem;
+        }
         h6{
             font-size: 1.5rem;
-            padding-bottom: 0.5rem;
+            text-align: center;
         }
         .items-hr{
             width: 75%;
@@ -93,6 +103,13 @@
             display: block;
             text-align: center !important;
         }
+        /*Row stuff. For the row sizes, go to the @media section :) */
+        .text-row{
+            /*height: 9rem;*/
+            vertical-align: top;
+        }
+
+        /*Beneath the projects section*/
         article{
             text-align: justify;
         }
@@ -113,14 +130,24 @@
             text-align: center;
             padding-top: 1vh;
         }
+
+        /*People I love dearly section*/
         .more{
             /*background-color: #212F3D;*/
-            background-color: #242323;
+            background-color: #535457;
             color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
         }
+        .more .text-row{
+            height: 2rem !important;
+        }
+
         .more .items-hr{
             background-color: #fff;
         }
+
+        /*Footer*/
         footer{
             /*background-color: #212F3D;*/
             background-color: #242323;
@@ -133,191 +160,364 @@
             padding-top: 2vh;
             color: #fff;
         }
+
+        /*MEDIA SCREEN VIEWPORT STUFF*/
+        /*I. For the boxes*/
+        @media only screen and (min-width: 1100px){
+            .title-row{
+                height: 3rem;
+            }
+            .text-row{
+                height: 50rem;
+            }
+            .button-row{
+                height: 3rem;
+            }
+        }
+        @media only screen and (min-width: 768px){
+            .title-row{
+                height: 5rem;
+            }
+            .text-row{
+                height: 15rem;
+            }
+            .button-row{
+                height: 3rem;
+            }
+        }
+        @media only screen and (min-width: 576px){
+            .title-row{
+                height: 3rem;
+            }
+            .text-row{
+                height: 9rem;
+            }
+            .button-row{
+                height: 3rem;
+            }
+        }
+
+
     </style>
+
+    <!--Translation JS-->
+     <script>
+        document.addEventListener("DOMContentLoaded", function () { 
+        const defaultLang = "en"; // !!! CHOOSE YOUR DEFAULT LANGUAGE: en, fr, ru, de, ... !!!
+        const storedLang = localStorage.getItem("language") || defaultLang;
+        loadTranslations(storedLang);
+
+        document.querySelectorAll(".available").forEach(link => { // !!! MAY NEED TO RE-CHECK THE CLASS NAME !!!
+            link.addEventListener("click", function (e) { 
+                e.preventDefault();
+                const selectedLang = this.dataset.lang; 
+                localStorage.setItem("language", selectedLang);
+                loadTranslations(selectedLang);
+            });
+        });
+
+        function loadTranslations(lang) {
+            fetch("index-translations.json") // !!! NEED TO PUT THE NAME OF THE JSON FILE IN BETWEEN THE QUOTES !!!
+                .then(response => response.json())
+                .then(data => {
+                    document.title = data[lang].title; //Changes the page title. Do not touch. 
+
+                    //FROM THIS LINE FORWARD YOU HAVE TO MANUALLY ADD EACH ID TO BE TRANSLATED IN THE FORMAT:
+                    //document.getElementById("ID NAME IN QUOTES").innerHTML = data[lang].IDNAMEWITHOUTQUOTES;
+                    //document.getElementById("").innerHTML = data[lang].;
+
+                    document.getElementById("cover-welcome").innerHTML = data[lang]["cover-welcome"];
+                    document.getElementById("cover-caption").innerHTML = data[lang]["cover-caption"];
+                    document.getElementById("projects-title").innerHTML = data[lang]["projects-title"];
+                    document.getElementById("photcol-title").innerHTML = data[lang]["photcol-title"];
+                    document.getElementById("photcol-text").innerHTML = data[lang]["photcol-text"];
+                    document.getElementById("photcol-btn").innerHTML = data[lang]["photcol-btn"];
+                    document.getElementById("local-title").innerHTML = data[lang]["local-title"];
+                    document.getElementById("local-text").innerHTML = data[lang]["local-text"];
+                    document.getElementById("local-btn").innerHTML = data[lang]["local-btn"];
+                    document.getElementById("legal-title").innerHTML = data[lang]["legal-title"];
+                    document.getElementById("legal-text").innerHTML = data[lang]["legal-text"];
+                    document.getElementById("legal-btn").innerHTML = data[lang]["legal-btn"];
+                    document.getElementById("other-title").innerHTML = data[lang]["other-title"];
+                    document.getElementById("other-text").innerHTML = data[lang]["other-text"];
+                    document.getElementById("other-btn").innerHTML = data[lang]["other-btn"];
+                    document.getElementById("about-title").innerHTML = data[lang]["about-title"];
+                    document.getElementById("version").innerHTML = data[lang]["version"];
+                    document.getElementById("change-log").innerHTML = data[lang]["change-log"];
+                    document.getElementById("about-me").innerHTML = data[lang]["about-me"];
+                    document.getElementById("about-me-p1").innerHTML = data[lang]["about-me-p1"];
+                    document.getElementById("about-me-p2").innerHTML = data[lang]["about-me-p2"];
+                    document.getElementById("about-me-p3").innerHTML = data[lang]["about-me-p3"];
+                    document.getElementById("caption-picofme").innerHTML = data[lang]["caption-picofme"];
+                    document.getElementById("history-title").innerHTML = data[lang]["history-title"];
+                    document.getElementById("history-p1").innerHTML = data[lang]["history-p1"];
+                    document.getElementById("history-p2").innerHTML = data[lang]["history-p2"];
+                    document.getElementById("history-p3").innerHTML = data[lang]["history-p3"];
+                    document.getElementById("thanks-title").innerHTML = data[lang]["thanks-title"];
+                    document.getElementById("thanks-p1").innerHTML = data[lang]["thanks-p1"];
+                    document.getElementById("thanks-p2").innerHTML = data[lang]["thanks-p2"];
+                    document.getElementById("footer-p1").innerHTML = data[lang]["footer-p1"];
+                    document.getElementById("footer-p2").innerHTML = data[lang]["footer-p2"];
+
+                });
+        }
+    });
+  </script>
 </head>
 <body>
 <div class="main-container">
     
+    <!--Navbar text-->
     <nav class="container-fluid">
-    <div class="row">
-        <div class="col-sm-5 languages">
-            <ul>
-                <span class="available"><li><a href="">English</a></li></span>
-                <span class="available"><li><a href="index-fr.html">Français</a></li></span>
-                <span class="unavailable"><li><a href="">Русский</a></li></span>
-                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
-            </ul>
+        <div class="row">
+            <div class="col-sm-5 languages">
+                <ul> <!--For any available languages modify the class from "unavailable" to "available"-->
+                    <span class="available" data-lang="en"><li><a href="">English</a></li></span>
+                    <span class="available" data-lang="fr"><li><a href="">Français</a></li></span>
+                    <span class="unavailable" data-lang="ru"><li><a href="">Русский</a></li></span>
+                    <span class="unavailable" data-lang="de"><li><a href="">Deutsch</a></li></span>
+                </ul>
+            </div>
+            <div class="col-sm-2 logo">
+                    <a href="https://maxanceprojects.github.io"><img class="logo-img" src="images/favicons/maxanceprojects-logo.png"></a>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                    <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-2 logo">
-                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="images/favicons/maxanceprojects-logo.png"></a>
-        </div>
-        <div class="col-sm-5 social">
-            <ul>
-                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
-                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
-                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
-            </ul>
-        </div>
-    </div>
     </nav>
     
-    <div class="separator-white"></div>
-    
     <div class="cover">
-        <h1 class="cover-text">Welcome to my website!</h1>
+        <h1 class="cover-text" id="cover-welcome"></h1>
         <hr class="cover-hr">
     </div>
     
-    <div class="separator-white"></div>
-    
-    <div class="separator-dark" style="height: auto !important;">
-        <p style="text-align: center; color: #fff; font-size: 1.5vh; padding-top: 1vh; padding-bottom: 1vh !important; font-style: italic;">Pictured above are the Ruins of the Oujon Carthusian Monastery, in the Jura Mountains. Simply put, it is my favorite place in the world. Picture taken on Wednesday June 1st 2022.</p>
-        <div class="separator-white" style="margin: 0; padding: 0;"></div>
+    <div class="cover-caption-box" style="height: auto !important;">
+        <p style="text-align: center; color: #fff; font-size: 1.5vh; padding-top: 1vh; padding-bottom: 1vh !important; font-style: italic;" id="cover-caption"></p>
     </div>
-    
-    
     
     <main class="container-fluid">
     <div class="title-box">
-        <h1>Projects</h1>
+        <h1 id="projects-title"></h1>
         <hr>
     </div>
     <div class="row">
-        <div class="col-md-3 col-sm-6 content-column">
-            <h6 class="text-center">The Library</h6>
-            <p class="box-text">All of my <b>written</b> work is either available or just indexed on this page.</p>
-            <hr class="items-hr">
-            <div class="button py-2">
-                <button class="btn btn-dark btn-center text-center"><a href="library/library.html" class="text-light"  >Access</a></button>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 content-column">
-            <h6 class="text-center">Exploration</h6>
-            <p class="box-text">Everything related to exploration, hiking, the map, and local history is available here.</p>
-            <hr class="items-hr">
-            <div class="button py-2">
-                <button class="btn btn-dark btn-center text-center"><a href="exploring/exploring.html" class="text-light"  >Access</a></button>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 content-column">
-            <h6 class="text-center">Pantheons</h6>
-            <p class="box-text">Fancy pages to show things I like and appreciate.</p>
-            <hr class="items-hr">
-            <div class="button py-2">
-                <button class="btn btn-dark btn-center text-center"><a href="pantheons/pantheons.html" class="text-light"  >Access</a></button>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 content-column">
-            <h6 class="text-center">Other/Everything Else</h6>
-            <p class="box-text">All the other projects I've done.</p>
-            <hr class="items-hr">
-            <div class="button py-2">
-                <button class="btn btn-dark btn-center text-center"><a href="other/other.html" class="text-light"  >Access</a></button>
-            </div>
-        </div>
+
+        <div class="col-md-3 col-sm-6 contcol"> <!--Content column start-->
+            <table>
+                <tr class="title-row"> <!--Title row-->
+                    <th><h6 id="photcol-title"></h6></th>
+                </tr>
+                <tr class="text-row"> <!--Text row-->
+                    <td><p class="box-text" id="photcol-text"></p></td>
+                </tr>
+                <tr class="button-row"> <!--HR and Button row-->
+                    <td>
+                        <hr class="items-hr">
+                        <div class="button py-2">
+                            <button class="btn btn-dark btn-center text-center"><a href="photos/photos.html" class="text-light" id="photcol-btn"></a></button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div> <!--Content column end-->
+
+        <div class="col-md-3 col-sm-6 contcol"> <!--Content column start-->
+            <table>
+                <tr class="title-row"> <!--Title row-->
+                    <th><h6 id="local-title"></h6></th>
+                </tr>
+                <tr class="text-row"> <!--Text row-->
+                    <td><p class="box-text" id="local-text"></p></td>
+                </tr>
+                <tr class="button-row"> <!--HR and Button row-->
+                    <td>
+                        <hr class="items-hr">
+                        <div class="button py-2">
+                            <button class="btn btn-dark btn-center text-center"><a href="exploring/exploring.html" class="text-light" id="local-btn"></a></button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div> <!--Content column end-->
+
+        <div class="col-md-3 col-sm-6 contcol"> <!--Content column start-->
+            <table>
+                <tr class="title-row"> <!--Title row-->
+                    <th><h6 id="legal-title"></h6></th>
+                </tr>
+                <tr class="text-row"> <!--Text row-->
+                    <td><p class="box-text" id="legal-text"></p></td>
+                </tr>
+                <tr class="button-row"> <!--HR and Button row-->
+                    <td>
+                        <hr class="items-hr">
+                        <div class="button py-2">
+                            <button class="btn btn-dark btn-center text-center"><a href="droit/rji.html" class="text-light" id="legal-btn"></a></button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div> <!--Content column end-->
+
+        <div class="col-md-3 col-sm-6 contcol"> <!--Content column start-->
+            <table>
+                <tr class="title-row"> <!--Title row-->
+                    <th><h6 id="other-title"></h6></th>
+                </tr>
+                <tr class="text-row"> <!--Text row-->
+                    <td><p class="box-text" id="other-text"></p></td>
+                </tr>
+                <tr class="button-row"> <!--HR and Button row-->
+                    <td>
+                        <hr class="items-hr">
+                        <div class="button py-2">
+                            <button class="btn btn-dark btn-center text-center"><a href="other/other.html" class="text-light" id="other-btn"></a></button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div> <!--Content column end-->
     </div>
     </main>
     
     <article>
     <div class="container-fluid">
         <div class="title-box">
-            <h1 class="pt-5">About this Website</h1>
+            <h1 class="pt-4" id="about-title"></h1>
             <hr>
         </div>
         <div class="row">
             <div class="col-md-8">
-                <p>The website is currently in its <b>Eleventh Version, First Update</b>. The contents of this website were last modified on <b>Wednesday January 1st 2025</b>. For more information, consult the change log below:</p>
+                <p id="version"></p>
                 <div class="button py-2">
-                    <button class="btn btn-dark btn-center text-center"><a href="about/change-log.html" class="text-light"  >View the Change Log</a></button>
+                    <button class="btn btn-dark btn-center text-center"><a href="about/change-log.html" class="text-light"   id="change-log"></a></button>
                 </div>
-                <p style="color: #d62460; padding-top: 1rem;">You may see that the website may offer translations. This is still unfortunately a work in progress, but I’m happy to say that the appropriate support has been developed so that when a new translation does come out, it will work effectively. Some pages take longer than usual to translate. In other cases, I don’t have the intention to translate a particular project. You can tell which pages offer a translation and which don’t by comparing the colors of the different links in the navigation pane. Should a translated page’s hyperlink lead you to an untranslated page, the page will be shown in its original language. </p>
-                <b>Website History</b>
-                <p>To begin with, I want to say that like most folks I particularly enjoy working on projects and going on adventures. As time passed, I thought it would be kind of funny and cool to share some of these projects and adventures somewhere, as well as to do more tech-related things. It was at this time, all the way back in summer of 2019, that I created one of my first public projects (the map, now available in the exploring section). “Wouldn’t it be nice to unite everything on one accessible place on the internet?” I asked myself. The idea of the so called “freaky website” was born (although it didn’t earn that name until later, thanks Eli). Couple this with my other platforms, you have an interesting digital image of me.</p>
+                <b id="about-me"></b>
+                <p id="about-me-p1"></p>
+                <p id="about-me-p2"></p>
+                <p id="about-me-p3"> </p>
             </div>
             <div class="col-md-4">
                 <div class="picture-container">
                     <img class="profile-picture" src="images/profiles/profile-max.jpg">
-                    <p class="caption">I'm literally him.</p>
+                    <p class="caption" id="caption-picofme"></p>
                 </div>
             </div>
-            <div class="col-md-8">
-                <p>Coding began as early as September 2020. Unfortunately, I was a little bit lazy with the project, so it took a lot of time to actually form into something coherent. The wiki (now The Library) and press (no longer existent) sections were the first to be created. A place to host the website for free needed to be found, with fast.io being considered as a solid candidate. A couple months later, fast.io stopped being a thing, so I turned to GitHub, leading to the iconic URL you can access this website with. On August 12th 2021, the website was launched in its First Version. It had an index, an about page (now simply the change log), an exploring portal with four sections, and a works portal (now the library). Some components of that website have been deleted, others have been disabled, hoping to one day be a functional part of the website. If you look at the source code and modification history, you’ll be able to see some of these remnants. This website has existed for nearly three years after writing this and a lot of new projects and redesigns came and went. I don’t pour immense amounts of time in this website either, so I can’t really tell what the future trajectory of this website will be. Hope you enjoy this website, and that you’ll enjoy the future updates too.</p>
-            </div>
-            <div class="col-md-4">
-                <!--<div class="picture-container" style="width: 70% !important;">
-                    <img class="profile-picture" src="images/profiles/postfrom.JPEG">
-                    <p class="caption">This is where I post from.</p>
-                </div>-->
+            <div class="col-md-12">
+                <b id="history-title"></b>
+                <p id="history-p1"></p>
+                <p id="history-p2"></p>
+                <p id="history-p3"></p>
             </div>
             <div class="col-md-12">
-                <b>Acknowledgements</b>
-                <p>It’s pretty clear that, first and foremost, I give a big thank you to GitHub for letting me host this website for free! <a href="https://pages.github.com/" target="_blank">Visit GitHub Pages here.</a></p>
-                <p>Particular thanks to Bootstrap for providing documentation which makes this work a trillion times easier. Bootstrap has provided a lot of essential formatting which has saved me hours of work, especially in the beginning when the website relied on it much more. It is a must have for anyone coding with HTML. <a href="https://getbootstrap.com/" target="_blank">Visit Bootstrap here</a>.</p>
-                <p>This website has been coded almost entirely (can’t fully guarantee it as my memory isn’t perfect) with Brackets. It is an incredibly useful tool that can autocomplete your code and provide other useful shortcuts, so you’re not lost. <a href="https://brackets.io/" target="_blank">Visit Brackets here</a>.</p>
-                <p>Thank you to Fontawesome for providing the icons used on this website, like in the navbar for example. <a href="https://fontawesome.com/" target="_blank">Visit Fontawesome here</a>.</p>
-                <p>Thank you to Favic-O-Matic for their tool which made the favicons (the icons in the tab) for this website. <a href="https://favicomatic.com/" target="_blank">Visit Favic-O-Matic here</a>.</p>
-                <p>Thank you to ChatGPT for saving me hours of copying and pasting stuff into HTML tags. I also thank ChatGPT for preventing my brain from being fried due to incomprehensible JavaScript. <a href="https://openai.com/chatgpt/" target="_blank">Visit ChatGPT here</a>.</p>
-                <p>Lastly, thank you to my Digital Design and Development teacher from Year 10-11, my friends in that class, and everyone on the internet who taught me and helped me out in HTML, CSS, JavaScript, and Python.</p>
+                <b id="thanks-title"></b>
+                <p id="thanks-p1"></p>
+                <p id="thanks-p2"></p>
             </div>
         </div>
     </div>
     </article>
-
-    <div class="separator-white"></div>
     
-    <div class="more">
+    <!-- <div class="more">
     <div class="container-fluid">
         <div class="title-box" style="margin-top: 0 !important;">
-            <h1 style="padding-top: 1rem;">See work from people I know and love dearly:</h1>
+            <h1 style="padding-top: 1rem;" id="">See work from people I know and love dearly:</h1>
             <hr style="background-color: #fff;">
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 content-column">
-                <h6 class="text-center">Zac's YouTube Channel</h6>
-                <p class="box-text">Fantastic projects made from LEGO.</p>
+
+            <div class="col-md-3 col-sm-6 contcol"> 
+                <table>
+                    <tr class="title-row"> 
+                        <th><h6 id="">ZBricks</h6></th>
+                    </tr>
+                    <tr class="text-row"> 
+                        <td><p class="box-text" id="">A friend of mine’s channel. He posts high-quality LEGO projects.</p></td>
+                    </tr>
+                    <tr class="button-row">
+                        <td>
+                            <hr class="items-hr">
+                            <div class="button py-2">
+                                <button class="btn btn-light btn-center text-center"><a href="https://www.youtube.com/c/ZBricks" class="text-dark" target="_blank" id="">Visit</a></button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                </table>
+            </div>
+
+            <div class="col-md-3 col-sm-6 contcol"> 
+                <table>
+                    <tr class="title-row"> 
+                        <th><h6 id="">Simple Web Games</h6></th>
+                    </tr>
+                    <tr class="text-row"> 
+                        <td><p class="box-text" id="">A website with JavaScript games that a friend and I made in February 2025. Still a work in progress.</p></td>
+                    </tr>
+                    <tr class="button-row"> 
+                        <td>
+                            <hr class="items-hr">
+                            <div class="button py-2">
+                                <button class="btn btn-light btn-center text-center"><a href="https://simplewebgames.github.io/games/" class="text-dark" target="_blank" id="">Visit</a></button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                </table>
+            </div> 
+
+            <div class="col-md-3 col-sm-6 contcol">
+                <table>
+                    <tr class="title-row"> 
+                        <th><h6>Liminal Lens</h6></th>
+                    </tr>
+                    <tr class="text-row"> 
+                        <td><p class="box-text">A channel brought to you by the creator of ZBricks. Very talented!</p></td>
+                    </tr>
+                    <tr class="button-row"> 
+                        <td>
+                            <hr class="items-hr">
+                            <div class="button py-2">
+                                <button class="btn btn-light btn-center text-center"><a href="https://www.youtube.com/@liminalens" class="text-dark" target="_blank">Visit</a></button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                </table> 
+            </div> 
+
+
+            <div class="col-md-3 col-sm-6 contcol">
+                <h6 class="text-center">Iris applications</h6>
+                <p class="box-text">Made by a good friend of mine who wishes to remain anonymous.</p>
                 <hr class="items-hr">
                 <div class="button py-2">
-                    <button class="btn btn-light btn-center text-center"><a href="https://www.youtube.com/c/ZBricks" class="text-dark" target="_blank">Visit</a></button>
+                    <button class="btn btn-light btn-center text-center"><a href="https://irisapplications.com/" class="text-dark" target="_blank">Visit</a></button>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    
-    <div class="separator-white"></div>
+    </div> -->
     
     <footer>
-        <p>Website hosted thanks to Github Pages. Please reach out with the email link in the navbar if you have any questions. Enjoy the website.</p>
-            
-        <p>The access to the repository is available <a href="https://github.com/MaxanceProjects/maxanceprojects.github.io" target="_blank">here</a>.</p>
+        <p id="footer-p1"></p>
+        <p id="footer-p2"></p>
     </footer>
     
 </div>
 <!-- ----------------------JAVASCRIPT IS HERE, DO NOT GO FURTHER ------------------------------------->
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-<!--
-<div class="col-md-3 col-sm-6 content-column">
-            <h6 class="text-center"></h6>
-            <p class="box-text"></p>
-            <hr class="items-hr">
-            <div class="button py-2">
-                <button class="btn btn-dark btn-center text-center"><a href="" class="text-light"  >Access</a></button>
-            </div>
-        </div>
-<div class="col-md-3 col-sm-6 content-column">
-                <h6 class="text-center"></h6>
-                <p class="box-text"></p>
-                <hr class="items-hr">
-                <div class="button py-2">
-                    <button class="btn btn-light btn-center text-center"><a href="" class="text-dark"  >Access</a></button>
-                </div>
-            </div>
-
--->

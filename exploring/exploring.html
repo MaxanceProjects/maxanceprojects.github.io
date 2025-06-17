@@ -5,63 +5,52 @@
     <!-- Meta stuff that's needed -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <!--Search Engine Meta-->
     <meta name="description" content="The exploring portal for anything in a 120km radius around the Commugny Church.">
     <meta name="keywords" content="maxanceprojects maxance projects github io exploring portal exploration">
-    
     <!--CSS STYLESHEET LINK-->
-    <link rel="stylesheet" type="text/css" href="">      
-      
+    <link rel="stylesheet" type="text/css" href="">            
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script>
-    
-    <title>Exploring portal</title>
+
+    <title></title>
     
     <!--Favicons-->
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
-    
     <link rel="stylesheet" href="../styles/navbar.css">
     
     <!--Local Internal CSS-->
     <style type="text/css">
-        
         body{
             font-family: "Times New Roman", serif !important;
         }
-        
         .main-container{
             margin-left: auto;
             margin-right: auto;
             width: 90%;
         }
-        
         table, th, td {
             border: 1px solid black;
             width: 100%;
             text-align: center;
         }
-        
         .section-column{
             padding-bottom: 2rem;
         }
-        
         .box-image{
             width: 80%;
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
-        
         .section-title{
             font-weight: bold;
             font-size: 1rem;
             padding-top: 0.5rem;
         }
-        
         .section-text{
             font-weight: lighter;
             font-size: 0.9rem;
@@ -79,116 +68,140 @@
         }
         .publication-col{
             margin-bottom: 4vh;
-        }
-        
+        }       
         .separator{
             height: 1vh;
             background-color: #ccc;
         }
-
-
     </style>
+
+    <!--Translation JS-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () { 
+                const defaultLang = "en"; // !!! CHOOSE YOUR DEFAULT LANGUAGE: en, fr, ru, de, ... !!!
+                const storedLang = localStorage.getItem("language") || defaultLang;
+                loadTranslations(storedLang);
+
+            document.querySelectorAll(".available").forEach(link => { // !!! MAY NEED TO RE-CHECK THE CLASS NAME !!!
+                link.addEventListener("click", function (e) { 
+                    e.preventDefault();
+                    const selectedLang = this.dataset.lang; 
+                    localStorage.setItem("language", selectedLang);
+                    loadTranslations(selectedLang);
+                });
+            });
+
+            function loadTranslations(lang) {
+                fetch("local-translation.json") // !!! NEED TO PUT THE NAME OF THE JSON FILE IN BETWEEN THE QUOTES !!!
+                    .then(response => response.json())
+                    .then(data => {
+                        document.title = data[lang].title; //Changes the page title. Do not touch. 
+
+                        //FROM THIS LINE FORWARD YOU HAVE TO MANUALLY ADD EACH ID TO BE TRANSLATED IN THE FORMAT:
+                        //document.getElementById("ID NAME IN QUOTES").innerHTML = data[lang]["ID NAME WITH QUOTES"];
+                        //document.getElementById("").innerHTML = data[lang][""];
+
+                        document.getElementById("exploring-title").innerHTML = data[lang]["exploring-title"];
+                        document.getElementById("world-title").innerHTML = data[lang]["world-title"];
+                        document.getElementById("world-text").innerHTML = data[lang]["world-text"];
+                        document.getElementById("resources-title").innerHTML = data[lang]["resources-title"];
+                        document.getElementById("resources-text").innerHTML = data[lang]["resources-text"];
+                        document.getElementById("historical-title").innerHTML = data[lang]["historical-title"];
+                        document.getElementById("historical-text").innerHTML = data[lang]["historical-text"];
+                        document.getElementById("library-title").innerHTML = data[lang]["library-title"];
+                        document.getElementById("library-intro-text").innerHTML = data[lang]["library-intro-text"];
+
+                    });
+            }
+        });
+    </script>
 </head>
 
 <body>
 <div class="main-container">
 
+    <!--Navbar text-->
     <nav class="container-fluid">
-    <div class="row">
-        <div class="col-sm-5 languages">
-            <ul>
-                <span class="available"><li><a href="">English</a></li></span>
-                <span class="available"><li><a href="exploration.html">Français</a></li></span>
-                <span class="unavailable"><li><a href="">Русский</a></li></span>
-                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
-            </ul>
+        <div class="row">
+            <div class="col-sm-5 languages">
+                <ul> <!--For any available languages modify the class from "unavailable" to "available"-->
+                    <span class="available" data-lang="en"><li><a href="">English</a></li></span>
+                    <span class="available" data-lang="fr"><li><a href="">Français</a></li></span>
+                    <span class="unavailable" data-lang="ru"><li><a href="">Русский</a></li></span>
+                    <span class="unavailable" data-lang="de"><li><a href="">Deutsch</a></li></span>
+                </ul>
+            </div>
+            <div class="col-sm-2 logo">
+                    <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                    <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-2 logo">
-                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
-        </div>
-        <div class="col-sm-5 social">
-            <ul>
-                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
-                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
-                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
-            </ul>
-        </div>
-    </div>
-    </nav>
+        </nav>
     
     <div class="separator"></div>
     
     <div class="title-container">
-        <h1 class="pt-4 text-center">Welcome to the exploring portal!</h1>
+        <h1 class="pt-4 text-center" id="exploring-title"></h1>
         <hr>
     </div>
     
     <div class="container-fluid">
     <div class="row">
-        
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
                 <th><a href="map.html" ><img class="box-image" src="images/map-cover.jpg" alt="The view from the Crêt de la Neuve (1494m)."></a></th>
             </tr>
             <tr>
-                <td><p class="section-title" style=""><span style="color:;">The World.</span></p></td>
+                <td><p class="section-title" id="world-title"></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">This page contains the map itself, a guide on how to use it, plus some extra info. To access it, click on the view from the Crêt de la Neuve and its flagpole, or <a href="map.html" >here</a>.</p></td>
+                <td><p class="section-text" id="world-text"></p></td>
             </tr>
-            </table>
-            
-            
+            </table>    
         </div>
-        
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
-                <th><a href="resources.html" ><img class="box-image" src="images/sources-cover.jpg" alt="St. Robert's Church, Founex"></a></th>
+                <th><a href="sources.html"><img class="box-image" src="images/sources-cover.jpg" alt="St. Robert's Church, Founex"></a></th>
             </tr>
             <tr>
-                <td><p class="section-title" style=""><span style="color:;">Resources Section</span></p></td>
+                <td><p class="section-title" id="resources-title"></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">Whether it's for the map or for other projects related to exploring, I always do research. By clicking on the resources section, you can see everything I use for exploration-related business. It's a goldmine of goldmines if you will. To access it, click on Saint Robert's Church, or click <a href="resources.html" >here</a>.</p></td>
+                <td><p class="section-text" id="resources-text"></p></td>
             </tr>
             </table>
-            
-            
         </div>
-        
-        
         <div class="col-lg-3 col-sm-6 section-column">
             <table>
             <tr>
                 <th><a href="historical.html" ><img class="box-image" src="images/historical-cover.jpg" alt="Ruins of Notre Dame d'Oujon in Autumn."></a></th>
             </tr>
             <tr>
-                <td><p class="section-title" style=""><span style="color:;">History of the Land</span></p></td>
+                <td><p class="section-title" id="historical-title"></p></td>
             </tr>
             <tr>
-                <td><p class="section-text">An overview of local history. By local I mean everything in a 100-120km radius from Point 0 (France isn't that well covered). Specific articles available below can complete the information. To access, click on the ruins of Notre Dame d'Oujon, or click <a href="historical.html" >here</a>.</p></td>
+                <td><p class="section-text" id="historical-text"></p></td>
             </tr>
             </table>
-            
-            
-        </div>
-        
+        </div>    
     </div>
     <div class="row" style="margin-top: 5vh;">
         <div class="col-lg-12">
-            <h4 style="text-align: center;" id="publications">Exploring Library</h4>
+            <h4 style="text-align: center;" id="library-title"></h4>
             <hr>
         </div>
-        
-        <p>The sections above are articles about general things. Here there are articles both in HTML and PDF form. So far there is nothing here though.</p>
-        
+        <p id="library-intro-text"></p>
     </div>
     </div>
-    
-    
 </div>
 <!-- ----------------------JAVASCRIPT IS HERE, DO NOT GO FURTHER ------------------------------------->
 <!-- Optional JavaScript -->

@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="en">  
 <head>      
     <!-- Meta stuff that's needed -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <!--Search Engine Meta-->
     <meta name="description" content="The map of every interesting place in a 120km radius around the Commugny Church is available here.">
     <meta name="keywords" content="maxanceprojects maxance projects github io map exploring the world place exploration point 0">
-    
     <!--CSS STYLESHEET LINK-->
     <link rel="stylesheet" type="text/css" href="">      
-      
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script>
     
-    <title>The World.</title>
+    <title></title>
     
     <!--Favicons-->
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
@@ -29,35 +24,40 @@
     
     <!--Local Internal CSS-->
     <style type="text/css">
-        
         body{
             font-family: "Times New Roman", serif !important;
         }
-        
         .main-container{
             width: 90%;
             background-color: #eee;
             margin-left: auto;
             margin-right: auto;
         }
-        
         ::selection{
             background-color: #f04343;
         }
-        
+        h1{
+            font-size: 1.25rem;
+            padding-top: 1rem;
+            font-weight: bold;
+            text-indent: 3vw;
+        }
+        p{
+            font-size: 1.1rem;
+        }
+        /*Map box stuff*/
         .map-container{
             width: 60%;
             margin-left: auto;
             margin-right: auto;
             background-color: #fff;
         }
-        
         .el-map{
             margin-left: auto;
             margin-right: auto;
             display: block;
         }
-        
+        /*Header pretty decorations*/
         .top-header-1{
             background-color: #2B2B2B;
             height: 3vh;
@@ -70,42 +70,30 @@
             background-color: #C90000;
             height: 4vh;
         }
-        
         .separator{
             background-color: #EFECEC;
             height: 0.5vh;
         }
-        
         .box-of-text{
             padding-bottom: 2vh;
         }
-        
-        .box-of-text h1{
-            font-size: 1.25rem;
-            margin-left: 3vw;
-            padding-top: 2vh;
-        }
-        
         .box-of-text p{
             margin-left: 3vw;
             margin-right: 3vw;
-            padding-top: 1vh;
-            padding-bottom: 1vh;
             text-indent: 1vw;
             text-align: justify;
         }
-        
         .table-container{
             width: 80% !important;
             margin-left: auto;
             margin-right: auto;
             table-layout: fixed;
         }
-        
         table{
             width: 100%;
             border: 1px solid black;
             text-align: center;
+            font-size: 1.1rem;
         }
         th{
             border: 1px solid black;
@@ -113,28 +101,20 @@
         tr{
             border: 1px solid black;
         }
-        
         table img{
             height: 2.5rem;
             margin-left: auto;
             margin-right: auto;
             display: block;
         }
-        
         .ico{
             width: 20%;
         }
-        
-        .id{
-            width: 10%;
-        }
-        
         .desc{
-            width: 70%;
+            width: 80%;
             padding-left: 5%;
             padding-right: 5%;
-        }
-        
+        } 
         .buybutton {
             padding: 1rem 3rem 1rem 3rem;
             text-decoration: none;
@@ -145,14 +125,12 @@
             font-weight: bold;
             background-color: #757575;
         }
-        
         .buybutton:hover {
             background-color: #FF4622;
             transition: 0.5s;
             color: #F4F4F4;
             cursor: pointer;
         }
-        
         .buttondiv{
             width: 100%;
             height: auto;
@@ -162,19 +140,16 @@
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
-        
         @media only screen and (max-width: 1600px){
             .map-container {
                 width: 75%;
             }
         }
-        
         @media only screen and (max-width: 1300px){
             .map-container {
                 width: 95%;
             }
         }
-        
         @media only screen and (max-width: 600px){
             .map-container {
                 width: 0%;
@@ -186,35 +161,90 @@
         }
 
     </style>
+
+    <!--Translation JS-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () { 
+                const defaultLang = "en"; // !!! CHOOSE YOUR DEFAULT LANGUAGE: en, fr, ru, de, ... !!!
+                const storedLang = localStorage.getItem("language") || defaultLang;
+                loadTranslations(storedLang);
+
+            document.querySelectorAll(".available").forEach(link => { // !!! MAY NEED TO RE-CHECK THE CLASS NAME !!!
+                link.addEventListener("click", function (e) { 
+                    e.preventDefault();
+                    const selectedLang = this.dataset.lang; 
+                    localStorage.setItem("language", selectedLang);
+                    loadTranslations(selectedLang);
+                });
+            });
+
+            function loadTranslations(lang) {
+                fetch("map-translation.json") // !!! NEED TO PUT THE NAME OF THE JSON FILE IN BETWEEN THE QUOTES !!!
+                    .then(response => response.json())
+                    .then(data => {
+                        document.title = data[lang].title; //Changes the page title. Do not touch. 
+
+                        //FROM THIS LINE FORWARD YOU HAVE TO MANUALLY ADD EACH ID TO BE TRANSLATED IN THE FORMAT:
+                        //document.getElementById("ID NAME IN QUOTES").innerHTML = data[lang]["ID NAME IN QUOTES"];
+                        //document.getElementById("").innerHTML = data[lang][""];
+
+                        document.getElementById("world-title").innerHTML = data[lang]["world-title"];
+                        document.getElementById("introduction").innerHTML = data[lang]["introduction"];
+                        document.getElementById("world-btn").innerHTML = data[lang]["world-btn"];
+                        document.getElementById("info-title").innerHTML = data[lang]["info-title"];
+                        document.getElementById("info-p1").innerHTML = data[lang]["info-p1"];
+                        document.getElementById("info-p2").innerHTML = data[lang]["info-p2"];
+                        document.getElementById("info-p3").innerHTML = data[lang]["info-p3"];
+                        document.getElementById("info-p4").innerHTML = data[lang]["info-p4"];
+                        document.getElementById("info-p5").innerHTML = data[lang]["info-p5"];
+                        document.getElementById("info-p6").innerHTML = data[lang]["info-p6"];
+                        document.getElementById("decrypt-title").innerHTML = data[lang]["decrypt-title"];
+                        document.getElementById("layer1-text").innerHTML = data[lang]["layer1-text"];
+                        document.getElementById("icon-header").innerHTML = data[lang]["icon-header"];
+                        document.getElementById("description-header").innerHTML = data[lang]["description-header"];
+                        document.getElementById("general").innerHTML = data[lang]["general"];
+                        document.getElementById("prehistoric").innerHTML = data[lang]["prehistoric"];
+                        document.getElementById("antiquity").innerHTML = data[lang]["antiquity"];
+                        document.getElementById("roman").innerHTML = data[lang]["roman"];
+                        document.getElementById("medieval").innerHTML = data[lang]["medieval"];
+                        document.getElementById("modern-contemporary").innerHTML = data[lang]["modern-contemporary"];
+                        document.getElementById("cave").innerHTML = data[lang]["cave"];
+                        document.getElementById("water").innerHTML = data[lang]["water"];
+
+                    });
+            }
+        });
+    </script>
 </head>
 
 <body>
 <!-- BODY GOES HERE -->      
 <div class="main-container">
     
+    <!--Navbar text-->
     <nav class="container-fluid">
-    <div class="row">
-        <div class="col-sm-5 languages">
-            <ul>
-                <span class="available"><li><a href="">English</a></li></span>
-                <span class="available"><li><a href="carte.html">Français</a></li></span>
-                <span class="unavailable"><li><a href="">Русский</a></li></span>
-                <span class="unavailable"><li><a href="">Deutsch</a></li></span>
-            </ul>
+        <div class="row">
+            <div class="col-sm-5 languages">
+                <ul> <!--For any available languages modify the class from "unavailable" to "available"-->
+                    <span class="available" data-lang="en"><li><a href="">English</a></li></span>
+                    <span class="available" data-lang="fr"><li><a href="">Français</a></li></span>
+                    <span class="unavailable" data-lang="ru"><li><a href="">Русский</a></li></span>
+                    <span class="unavailable" data-lang="de"><li><a href="">Deutsch</a></li></span>
+                </ul>
+            </div>
+            <div class="col-sm-2 logo">
+                    <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                    <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-2 logo">
-                <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
-        </div>
-        <div class="col-sm-5 social">
-            <ul>
-                <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
-                <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
-                <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
-            </ul>
-        </div>
-    </div>
-    </nav>
+        </nav>
     
     <div class="top-header-1"></div>
     <div class="top-header-2"></div>
@@ -223,9 +253,9 @@
     <div class="separator"></div>
     
     <div class="box-of-text">
-        <h1>Welcome!</h1>
+        <h1 id="world-title"></h1>
         <hr>
-        <p>You can either navigate through the window on this page (larger screens only) or click on the gray button below the frame. A set of layers and places should be visible on your left. You can check and uncheck boxes to see different layers. To see information regarding a location you can either click on it on the map or look at it on the menu on the left. The title provides an ID (see below for IDs and Icons) as well as the name of the place. Places have coordinates using multiple systems (mainly decimal coordinates).</p>
+        <p id="introduction"></p>
     </div>
     
     <div class="map-container">
@@ -233,168 +263,66 @@
     </div>
     
     <div class="buttondiv">
-    <a href="https://www.google.com/maps/d/viewer?mid=1xDsA59vMfHNttRjvfijOHFb53zpcDCgT&usp=sharing" target="_blank"><button class="buybutton">See the map</button></a>
+    <a href="https://www.google.com/maps/d/viewer?mid=1xDsA59vMfHNttRjvfijOHFb53zpcDCgT&usp=sharing" target="_blank"><button class="buybutton" id="world-btn"></button></a>
     </div>
     
     <div class="box-of-text">
-        <h1>Some additional information and disclaimers:</h1>
+        <h1 id="info-title"></h1>
         <hr>
         
-        <p>Although this map may lack accuracy at times, I promise that the stories I’ve written, the locations, and anything else on this map is as accurate as it can be from my own research. I haven’t been to every single place, but that is stated in the description as “location unverified.” By the off chance that even the slightest inaccuracy does occur, I apologize. Be sure to contact me if you have any corrections to make or any suggestions :)</p>
+        <p id="info-p1"></p> <!--Cf. cours de Sylvanus sur la responsabilité civile et le cas sur l'exclusion de responsabilité par actes concluants-->
+
+        <p id="info-p2"></p>
+
+        <p id="info-p3"></p>
+
+        <p id="info-p4"></p>
+
+        <p id="info-p5"></p>
         
-        <p>Please double check everything as the map gets updated regularly.</p>
+        <p id="info-p6"></p>
         
-        <p>Just like the website can’t be accessed by everyone (you actually need the link shared with you), so can this map. I’d appreciate it if the places weren’t shared everywhere. This isn’t a tourist guide but a useful tool to use between my friends and me. Chances are though, if you’re on this website you are a good friend of mine so use the map as you like! Please be respectful of the different places is the main thing I ask for.</p>
+        <h1 id="decrypt-title"></h1>
         
-        <p>All maps and sources I use are in the <a href="resources.html">resources and sources section</a>.</p>
-        
-        <h1>Explanation of layers, icons and IDs:</h1>
         <hr>
-        <p>This section explains every layer, as well as provides tables of icons you might see which belong to this table.</p>
-        
-        <hr>
-        <p><b>Layer 1</b>: Miscellaneous Places contains most of the places you'll see on the map. They're places that don't fit in a category of natural or historical features. They’re just nice places to go to.</p>
+        <p id="layer1-text"></p>
         <div class="table-container">
             <table>
                 <tr>
-                    <th class="ico">Icon</th>
-                    <th class="id">ID</th>
-                    <th class="desc">Description</th>
+                    <th class="ico" id="icon-header" style="font-size: 1.1rem;"></th>
+                    <th class="desc" id="description-header" style="font-size: 1.1rem;"></th>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/A.JPG"></td>
-                    <td class="id">A</td>
-                    <td class="desc">Miscellaneous Place, see above.</td>
-                </tr>
-            </table>
-        </div>
-        
-        <hr>
-        <p><b>Layer 2</b>: Historical Sites and Monuments contains anything of historical significance (although places that are very old but still used like churches will be in layer 4). Anything like a statue, a place of worship, an old construction, a castle, ruins, etc... These icons are colored according to the historical period they were either made in or best represented by. These do have some uncertainty though.</p>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th class="ico">Icon</th>
-                    <th class="id">ID</th>
-                    <th class="desc">Description</th>
+                    <td class="ico"><img src="map/general.png"></td>
+                    <td class="desc" id="general"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">A miscellaneous historical monument (no color shown).</td>
+                    <td class="ico"><img src="map/prehistoric.png"></td>
+                    <td class="desc" id="prehistoric"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-prehistoric.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything during or before the Neolithic period.</td>
+                    <td class="ico"><img src="map/antiquity.png"></td>
+                    <td class="desc" id="antiquity"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-celtic.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything Antiquity-related that is not Roman.</td>
+                    <td class="ico"><img src="map/roman.png"></td>
+                    <td class="desc" id="roman"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-roman.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything relevant to the Romans.</td>
+                    <td class="ico"><img src="map/medieval.png"></td>
+                    <td class="desc" id="medieval"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-middleages.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything relevant to the Middle Ages.</td>
+                    <td class="ico"><img src="map/modern-contemporary.png"></td>
+                    <td class="desc" id="modern-contemporary"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-postrenaissance.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything relevant to the Renaissance.</td>
+                    <td class="ico"><img src="map/cave.png"></td>
+                    <td class="desc" id="cave"></td>
                 </tr>
                 <tr>
-                    <td class="ico"><img src="map/H-modern.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">Anything relevant to the Modern Times and after (post-French Revolution).</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/H-statue.JPG"></td>
-                    <td class="id">H</td>
-                    <td class="desc">A (modern) statue.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/F.JPG"></td>
-                    <td class="id">H (F)</td>
-                    <td class="desc">A castle, fortification, etc... Color varies with time period as shown above.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/R.JPG"></td>
-                    <td class="id">H (R)</td>
-                    <td class="desc">A place of worship, church, temple... Color varies with time period as shown above.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/T-line.JPG"></td>
-                    <td class="id">H (P)</td>
-                    <td class="desc">A historical pathway, road, line... Color varies with time period as shown above.</td>
-                </tr>
-            </table>
-        </div>
-        
-        <hr>
-        <p><b>Layer 3</b>: Natural Features contains all geographical formations, features, and so on. *Very important note: all caves and mountains on this map are places which do not require as much experience and are therefore achievable with greater ease. It means that people like me (young adults who occasionally go out hiking) can do it with relative ease. This is not the <a href="https://en.wikipedia.org/wiki/Mont_Blanc" target="_blank">Mont Blanc</a>, nor the <a href="https://en.wikipedia.org/wiki/Dufourspitze" target="_blank">Dufourspitze</a>, nor the <a href="https://en.wikipedia.org/wiki/Finsteraarhorn" target="_blank">Finsteraarhorn</a>. It is not the <a href="https://www.visinand.ch/Speleo/IV_Jura_Vaudois/Arzier/Baume_no_2_de_la_Clairiere_de_Trebille/Baume_No_2_de_la_Clairiere_de_Trebille.htm" target="_blank">Baume n°2 de la Clairière de Trébille</a> either. As awesome as all of these ascents and descents are, they're unfortunately not possible as of now. The point is: if they're about to be reached and explored by me, or if they were already reached by me, they're on this map. Finally, and I cannot stress this enough: <span style="color: orangered">please be exceptionally careful, take all necessary precautions, do not do this with even an ounce of uncertainty. Get proper equipment, know what to expect, inform people before you leave, etc. Providing these places does not mean I give you the green light to do this. I am obviously not responsible for any accidents or injuries or incidents that occur in these places</span>.</p>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th class="ico">Icon</th>
-                    <th class="id">ID</th>
-                    <th class="desc">Description</th>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/C.JPG"></td>
-                    <td class="id">C</td>
-                    <td class="desc">A cave (<span style="color: orangered">ones which can be safely explored without much material. As always, please be careful as I'm not responsible for any accidents, do not get crushed to death tens of meters below ground. My opinion on each cave will be displayed in the description of the point</span>).</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/M-0-999.JPG"></td>
-                    <td class="id">M</td>
-                    <td class="desc">A peak between 0m and 999m above sea level (yes hills count).</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/M-1000-1999.JPG"></td>
-                    <td class="id">M</td>
-                    <td class="desc">A peak between 1000m and 1999m above sea level.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/M-2000-2999.JPG"></td>
-                    <td class="id">M</td>
-                    <td class="desc">A climbable* peak between 2000m and 2999m above sea level.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/M-3000-3999.JPG"></td>
-                    <td class="id">M</td>
-                    <td class="desc">A climbable* peak between 3000m and 3999m above sea level.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/M-4000-4999.JPG"></td>
-                    <td class="id">M</td>
-                    <td class="desc">A peak between 4000m and 4999m above sea level (and technically higher up).</td>
-                </tr>
-            </table>
-        </div>
-        
-        <p><b>Layer 4</b>: Temporary places. It’s for example if there is a temporary installation somewhere or an event going on. If I’m organizing a route there might be a temporary line too.</p>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th class="ico">Icon</th>
-                    <th class="id">ID</th>
-                    <th class="desc">Description</th>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/T-line.JPG"></td>
-                    <td class="id">T</td>
-                    <td class="desc">Temporary line/pathway.</td>
-                </tr>
-                <tr>
-                    <td class="ico"><img src="map/T.JPG"></td>
-                    <td class="id">T</td>
-                    <td class="desc">Temporary point.</td>
+                    <td class="ico"><img src="map/water.png"></td>
+                    <td class="desc" id="water"></td>
                 </tr>
             </table>
         </div>
