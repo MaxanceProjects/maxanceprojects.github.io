@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGNPNC</title>
+  <style>
+    body {
+        font-family: "Times New Roman", serif !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #0d1117;
+        color: #f0f6fc;
+        text-align: center;
+    }
+    .counter {
+        font-size: 2rem;
+        background-color: #161b22;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    .time-part {
+        margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter">
+    <p>Wednesday September 17th 2025, 05:00:00 CEST.</p>
+    <div id="timer"></div>
+  </div>
+
+  <script>
+    function updateTimer() {
+      // Event date in CET/CEST timezone
+      const eventDate = new Date("2025-09-17T05:00:00+02:00");
+      const now = new Date();
+
+      const diffMs = now - eventDate;
+
+      const seconds = Math.floor(diffMs / 1000);
+      const minutes = Math.floor(seconds / 60);
+      const hours = Math.floor(minutes / 60);
+      const days = Math.floor(hours / 24);
+
+      const displayHours = hours % 24;
+      const displayMinutes = minutes % 60;
+      const displaySeconds = seconds % 60;
+
+      document.getElementById("timer").innerHTML = `
+        <div class="time-part">${days} days</div>
+        <div class="time-part">${displayHours} hours</div>
+        <div class="time-part">${displayMinutes} minutes</div>
+        <div class="time-part">${displaySeconds} seconds</div>
+      `;
+    }
+
+    // Update every second
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Title-->
+    <title>Gallery</title> <!-- !!! MODIFY !!! -->
+
+    <!--Favicons-->
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
+
+    <!--Meta-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=""> <!-- !!! MODIFY !!! -->
+    <meta name="keywords" content=""> <!-- !!! MODIFY !!! -->
+
+    <!--External resources -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Bootstrap-->
+    <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script> <!--Fontawesome-->
+    <link rel="stylesheet" href="../styles/navbar.css"> <!--Local navbar style-->
+
+    <!--Internal CSS-->
+    <style type="text/css"> 
+        body{
+            font-family: "Times New Roman", serif !important;
+            background-color: #1c1c1c !important;
+        }
+        .main-container{
+            width: 90%;
+        }
+        h1, p{
+            color: #fff;
+        }
+        h1{
+            margin-bottom: 0;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        .collection{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .item-card{
+            display: inline-block !important;
+            background-color: transparent;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .item-card img{
+            height: 200px;
+            width: auto;
+            display: block !important;
+        }
+        .caption{
+            display: inline-block !important;
+            width: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Navbar text-->
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 languages">
+            </div>
+            <div class="col-sm-2 logo">
+                    <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                    <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <!--Website's main body goes here-->
+
+    <div class="main-container container-fluid">
+        <div class="section">
+            <h1>Title</h1>
+            <p>Date</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <div class="collection">
+                <div class="item-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1200px-Good_Food_Display_-_NCI_Visuals_Online.jpg">
+                    <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg">
+                    <p class="caption"></p>
+                </div>
+
+                <div class="item-card">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2023/06/Ultraprocessed-food-58d54c3.jpg?quality=90&resize=440,400">
+                    <p class="caption"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!--Final JS from bootstrap. Feel free to comment this out if not needed.-->
+<!-- Note from devs: "jQuery first, then Popper.js, then Bootstrap JS" -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,9 +1,10 @@
 /*CSS for the Universal Navbar*/
 nav{
-    background-color: #242323;
-    /*background-color: #910000;
+    /*background-color: #242323;
+    background-color: #910000;
     background-color: #212F3D;
     background-color: #7a0101;*/
+    background-color: #1c1c1c;
 }
 nav a{
     color: white;
@@ -17,7 +18,7 @@ nav a{
     margin-right: auto;
     display: block;
     list-style-type: none;
-    float: left;
+    /*float: left;*/
     display: inline-block;
 }
 .languages ul li {
