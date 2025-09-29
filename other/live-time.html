@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NGNPNC</title>
+  <title>Time since my ahh was born</title>
   <style>
     body {
         font-family: "Times New Roman", serif !important;
@@ -17,7 +17,7 @@
         text-align: center;
     }
     .counter {
-        font-size: 1rem;
+        font-size: 2rem;
         background-color: #161b22;
         padding: 2rem;
         border-radius: 1rem;
@@ -29,14 +29,14 @@
 </head>
 <body>
   <div class="counter">
-    <p style="font-size: 0.75rem;">Friday October 3rd 2025, 05:00:00 CEST.</p>
+    <p>Time since my ahh was born, Thursday November 4th 2004, 21:52.</p>
     <div id="timer"></div>
   </div>
 
   <script>
     function updateTimer() {
       // Event date in CET/CEST timezone
-      const eventDate = new Date("2025-10-03T05:00:00+02:00");
+      const eventDate = new Date("2004-11-04T21:52:00+01:00");
       const now = new Date();
 
       const diffMs = now - eventDate;
