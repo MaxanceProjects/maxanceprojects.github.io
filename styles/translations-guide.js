@@ -7,7 +7,7 @@ To implement this script into a page, do the following:
 1. Paste the relevant code (not the annotated version) right beneath the CSS formatting.
 2. Proceed to give each bit of text on the page a unique ID using id="". 
 3. For tranquility purposes, do not delete any text. That will be the default "unloaded" text, set to the page's default language.
-4. Create the JSON file IN THE SAME FOLDER AS THE PAGE and paste the original language. Each ID has the proper text in each version. 
+4. Create the JSON file IN THE SAME FOLDER AS THE PAGE and paste the original language. Each ID has the proper text in each version. Name it "pagename-translation.json" (e.g: information.html and information-translation.json).
 5. Configure all the translations. Use steps 1-5 in the instructions below these ones.
 6. Go back to your script and configure wherever there is a comment with !!! TEXT !!!. You can configure the default language, the class for the translation button/link, and the name of the JSON file.
 7. Then go to the end of the code and configure for each desired ID to be translated. And there, it should be ready.

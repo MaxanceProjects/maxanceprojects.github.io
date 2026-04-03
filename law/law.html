@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>      
+    <!-- Meta stuff that's needed -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Search Engine Meta-->
+    <meta name="description" content="All things related to law, local, national, and international.">
+    <meta name="keywords" content="maxanceprojects maxance projects github io exploring portal law legal review whiterock">
+    <!--CSS STYLESHEET LINK-->
+    <link rel="stylesheet" type="text/css" href="">            
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/71d3f8ed81.js" crossorigin="anonymous"></script>
+
+    <title></title>
+    
+    <!--Favicons-->
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="../styles/navbar.css">
+    
+    <!--Local Internal CSS-->
+    <style type="text/css">
+        body{
+            font-family: "Times New Roman", serif !important;
+        }
+        .main-container{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            width: 100%;
+            text-align: center;
+        }
+        .section-column{
+            padding-bottom: 2rem;
+        }
+        .box-image{
+            width: 80%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .section-title{
+            font-weight: bold;
+            font-size: 1rem;
+            padding-top: 0.5rem;
+        }
+        .section-text{
+            font-weight: lighter;
+            font-size: 0.9rem;
+            padding-top: 0.4rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            text-align: justify;
+            text-indent: 2rem;
+        }
+        .button{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            text-align: center !important;
+        }
+        .publication-col{
+            margin-bottom: 4vh;
+        }       
+        .separator{
+            height: 1vh;
+            background-color: #ccc;
+        }
+    </style>
+
+    <!--Translation JS-->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () { 
+    const defaultLang = "en"; // !!! CHOOSE YOUR DEFAULT LANGUAGE: en, fr, ru, de, ... !!!
+    const storedLang = localStorage.getItem("language") || defaultLang;
+    loadTranslations(storedLang);
+
+    document.querySelectorAll(".available").forEach(link => { // !!! MAY NEED TO RE-CHECK THE CLASS NAME !!!
+        link.addEventListener("click", function (e) { 
+            e.preventDefault();
+            const selectedLang = this.dataset.lang; 
+            localStorage.setItem("language", selectedLang);
+            loadTranslations(selectedLang);
+        });
+    });
+
+    function loadTranslations(lang) {
+        fetch("law-translation.json") // !!! NEED TO PUT THE NAME OF THE JSON FILE IN BETWEEN THE QUOTES !!!
+            .then(response => response.json())
+            .then(data => {
+                document.title = data[lang].title; //Changes the page title. Do not touch. 
+
+                //FROM THIS LINE FORWARD YOU HAVE TO MANUALLY ADD EACH ID TO BE TRANSLATED IN THE FORMAT:
+                //document.getElementById("ID NAME IN QUOTES").innerHTML = data[lang]["ID NAME IN QUOTES"];
+                //document.getElementById("").innerHTML = data[lang][""];
+
+                document.getElementById("legal-title").innerHTML = data[lang]["legal-title"];
+                document.getElementById("links-title").innerHTML = data[lang]["links-title"];
+                document.getElementById("links-text").innerHTML = data[lang]["links-text"];
+                document.getElementById("collections-title").innerHTML = data[lang]["collections-title"];
+                document.getElementById("collections-text").innerHTML = data[lang]["collections-text"];
+
+            });
+    }
+    });
+    </script>
+</head>
+
+<body>
+<div class="main-container">
+
+    <!--Navbar text-->
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 languages">
+                <ul> <!--For any available languages modify the class from "unavailable" to "available"-->
+                    <span class="available" data-lang="en"><li><a href="">English</a></li></span>
+                    <span class="available" data-lang="fr"><li><a href="">Français</a></li></span>
+                    <span class="unavailable" data-lang="ru"><li><a href="">Русский</a></li></span>
+                    <span class="unavailable" data-lang="de"><li><a href="">Deutsch</a></li></span>
+                </ul>
+            </div>
+            <div class="col-sm-2 logo">
+                    <a href="https://maxanceprojects.github.io"><img class="logo-img" src="../images/favicons/maxanceprojects-logo.png"></a>
+            </div>
+            <div class="col-sm-5 social">
+                <ul>
+                    <a href="mailto:maxanceprojects@gmail.com" target="_blank"><li><i class="fa-solid fa-envelope"></i></li></a>
+                    <a href="https://www.instagram.com/maxance.jouanneau/" target="_blank"><li><i class="fa-brands fa-square-instagram"></i></li></a>
+                    <a href="https://www.linkedin.com/in/maxance-jouanneau/?originalSubdomain=ch" target="_blank"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                    <a href="https://www.youtube.com/channel/UCNY2kD176hUeHKOd3m9HBrA" target="_blank"><li><i class="fa-brands fa-youtube"></i></li></a>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    
+    <div class="separator"></div>
+    
+    <div class="title-container">
+        <h1 class="text-center" id="legal-title" style="padding-top: 2rem;">Legal works section</h1>
+        <hr>
+    </div>
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 section-column">
+            <table>
+            <!--<tr>
+                <th><a href="LINK" ><img class="box-image" src="images/COVER" alt="ALT"></a></th>
+            </tr>-->
+            <tr>
+                <td><p class="section-title" id="links-title"></p></td>
+            </tr>
+            <tr>
+                <td><p class="section-text" id="links-text"></p></td>
+            </tr>
+            </table>
+            
+            
+        </div>
+
+        <div class="col-lg-3 col-sm-6 section-column">
+            <table>
+            <!--<tr>
+                <th><a href="LINK" ><img class="box-image" src="images/COVER" alt="ALT"></a></th>
+            </tr>-->
+            <tr>
+                <td><p class="section-title" id="collections-title"></p></td>
+            </tr>
+            <tr>
+                <td><p class="section-text" id="collections-text"></p></td>
+            </tr>
+            </table>
+            
+            
+        </div>
+
+    </div>
+    </div>
+</div>
+</body>
+</html>
+<!--Put some additionnal stuff here if need be-->
+
+<!--
+<div class="col-lg-3 col-sm-6 section-column">
+            <table>
+            <tr>
+                <th><a href="LINK" ><img class="box-image" src="images/COVER" alt="ALT"></a></th>
+            </tr>
+            <tr>
+                <td><p class="section-title" id="">SECTION TITLE</p></td>
+            </tr>
+            <tr>
+                <td><p class="section-text" id="">DESCRIPTION TEXT To access, click on the ruins of IMAGE, or click <a href="LINK" >here</a>.</p></td>
+            </tr>
+            </table>
+            
+            
+        </div>
+
+
+
+
+<div class="col-lg-2 publication-col">
+            <h6 style="text-align: center;">Title of the Publication</h6>
+            <hr>
+            <p style="text-align: justify;">TEXT</p>
+            <div class="button pb-3 pt-1">
+                    <button class="btn btn-dark btn-center text-center"><a href="LINK" class="text-light" >Read</a></button>
+            </div>
+        </div>

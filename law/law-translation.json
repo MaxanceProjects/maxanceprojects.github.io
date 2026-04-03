@@ -1,0 +1,24 @@
+{
+    "en": {
+        "title": "Legal works",
+        "legal-title": "Legal works",
+        "links-title": "List of legal links",
+        "links-text": "Contains a list of all useful websites for legal research, as well as an explanatory document (not up to date). To access, click <a href='rji.html'>here</a>.",
+        "collections-title": "Collections of court rulings",
+        "collections-text": "Contains various collections of interesting rulings, from several jurisdictions (mostly Swiss). To access, click <a href='LINK'>here</a>."
+    },
+    "fr": {
+        "title": "Travaux juridiques",
+        "legal-title": "Travaux juridiques",
+        "links-title": "Tous les liens du droit",
+        "links-text": "Contient une liste de tous les sites utiles à la recherche juridique numérique, ainsi qu'un document explicatif (pas à jour). Pour y accéder, cliquez <a href='rji.html'>ici</a>.",
+        "collections-title": "Recueils d'arrêts",
+        "collections-text": "Contient divers recueils d'arrêts intéressants, provenant de juridictions diverses (principalement suisses). Pour y accéder, cliquez <a href='iuscollections.html'>ici</a>."
+    },
+    "ru": {
+        "title": ""
+    },
+    "de": {
+        "title": ""
+    }
+}
